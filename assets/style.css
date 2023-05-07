@@ -25,17 +25,17 @@ body {
     height: 100vh; 
 }
 
-/* Green color for correct answers */
+/* green color for correct answers */
 body.correct {
     background-color: var(--color-correct-ans);
 }
 
-/* Red color for incorrect answers */
+/* red color for incorrect answers */
 body.incorrect {
     background-color: var(--color-incorrect-ans);
 }
 
-/* Main container */
+/* main container */
 .container {
     width: 800px;
     max-width: 80%;
@@ -45,6 +45,7 @@ body.incorrect {
     box-shadow: 0 0 10px 2px;
 }
 
+/* answer buttons */
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -52,6 +53,7 @@ body.incorrect {
     margin: 20px 0;
 }
 
+/* all buttons */
 .btn {
     background-color: var(--color-btn);
     border: 1px solid;
@@ -60,3 +62,32 @@ body.incorrect {
     color: #fff;
 }
 
+/* hover effect over buttons */
+.btn:hover {
+    border-color: #000;
+}
+
+.btn.correct {
+    background-color: var(--color-correct-ans);
+    color: #000;
+}
+
+.btn.incorrect {
+    background-color: var(--color-incorrect-ans);
+}
+
+.start-btn, .next.btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
