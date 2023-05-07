@@ -6,8 +6,12 @@
     font-family: Space Mono, Lato;
 }
 
+/* base colors defined as variables */
 :root {
-    --color-base: #346beb
+    --color-base: #346beb;
+    --color-btn: #5C88EF;
+    --color-incorrect-ans: #d41111;
+    --color-correct-ans: #1fc461;
 }
 
 body {
@@ -21,5 +25,38 @@ body {
     height: 100vh; 
 }
 
+/* Green color for correct answers */
+body.correct {
+    background-color: var(--color-correct-ans);
+}
 
+/* Red color for incorrect answers */
+body.incorrect {
+    background-color: var(--color-incorrect-ans);
+}
+
+/* Main container */
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: var(--color-btn);
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+}
 
