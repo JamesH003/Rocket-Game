@@ -19,6 +19,22 @@ nextBtn.addEventListener('click', () => {
     nextQuestion();
 })
 
+// countdown timer 
+let countdownTimer = 30;
+    let timer = document.getElementById('countdown-timer');
+    
+    let timerId = setInterval(countdown, 1000);
+    
+    function countdown() {
+      if (countdownTimer == -1) {
+        clearTimeout(timerId);
+        initiateSelfDestruct();
+      } else {
+        timer.innerHTML = countdownTimer + ' :00';
+        countdownTimer--;
+      }
+    }
+
 
 // -----------------------------------------FUNCTIONS---------------------------------------------------------------
 
