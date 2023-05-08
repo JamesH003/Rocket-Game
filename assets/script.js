@@ -3,14 +3,21 @@ const startButton = document.getElementById('start-btn');
 // defines the var questionContainerElement as the Question container
 const questionContainerElement = document.getElementById('question-container')
 
+// defines the var questionElement as the question div
+const questionElement = document.getElementById('question')
+
+// defines the var answerButtonsElement as the answer buttons div
+const answerButtonsElement = document.getElementById('answer-buttons')
+
 // this just creates two new variables which will default both to 'undefined'
-const shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex
 
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startGame function.
 startButton.addEventListener('click', startGame)
 
 
+// -----------------------------------------FUNCTIONS---------------------------------------------------------------
 
 // function to start the game when the 'Start' button is clicked
 function startGame() {
@@ -37,7 +44,10 @@ function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
-function showQuestion(question)
+
+function showQuestion(question) {
+    questionElement.innerText = question.question
+}
 
 // This is when we actually select an answer
 function selectAnswer() {
