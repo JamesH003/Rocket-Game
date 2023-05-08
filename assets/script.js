@@ -19,6 +19,9 @@ let shuffledQuestions, currentQuestionIndex
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startGame function.
 startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+    setNextQuestion()
+})
 
 
 // -----------------------------------------FUNCTIONS---------------------------------------------------------------
@@ -82,8 +85,14 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    // shows the 'Next' button after you answer a question
-    nextButton.classList.remove('hide')
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        // shows the 'Next' button after you answer a question
+        nextButton.classList.remove('hide') 
+    } else {
+        startButton.innerText = 'Restart';
+        startButton.classList.remove('hide');
+    }
+    
 }
 
 // sets the status of both the selected answer button and the body - changes the color to green or red depending on whether the answer is correct or incorrect
