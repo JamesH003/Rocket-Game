@@ -11,6 +11,11 @@ let answerButtons = document.getElementById('answer-buttons')
 // this creates two new variables which will default both to 'undefined'
 let randomQuestions, currentQuestion
 
+// countdown timer 
+let countdownTimer = 30;
+let timer = document.getElementById('countdown-timer');
+let timerId = setInterval(countdown, 1000);
+
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
 startBtn.addEventListener('click', startQuiz)
@@ -19,21 +24,11 @@ nextBtn.addEventListener('click', () => {
     nextQuestion();
 })
 
-// countdown timer 
-let countdownTimer = 30;
-    let timer = document.getElementById('countdown-timer');
+startBtn.addEventListener('click', countdown)
+
+
     
-    let timerId = setInterval(countdown, 1000);
     
-    function countdown() {
-      if (countdownTimer == -1) {
-        clearTimeout(timerId);
-        initiateSelfDestruct();
-      } else {
-        timer.innerHTML = countdownTimer + ' :00';
-        countdownTimer--;
-      }
-    }
 
 
 // -----------------------------------------FUNCTIONS---------------------------------------------------------------
@@ -56,6 +51,17 @@ function startQuiz() {
     nextQuestion();
 }
 
+// countdown timer
+function countdown() {
+    if (countdownTimer == -1) {
+      clearTimeout(timerId);
+      initiateSelfDestruct();
+    } else {
+      timer.innerHTML = countdownTimer + ' :00';
+      countdownTimer--;
+    }
+  }
+
 
 // This is going to set the next question when the 'Next' button is clicked
 function nextQuestion() {
@@ -76,6 +82,7 @@ function displayQuestion(question) {
         button.classList.add('btn');
         if (answer.correct) {
             button.dataset.correct = answer.correct;
+
         } 
         button.addEventListener('click', userAnswer)
         answerButtons.appendChild(button);
@@ -113,6 +120,7 @@ function setStatus(element, correct) {
     removeStatus(element)
     if (correct) {
         element.classList.add('correct')
+        incrementScore();
     } else {
         element.classList.add('incorrect')
     }
@@ -123,6 +131,17 @@ function removeStatus(element) {
     element.classList.remove('correct')
     element.classList.remove('incorrect')
 }
+
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++oldScore;
+
+}
+
+
+// to get the current time of day
+function getHours();
+
 
 
 
@@ -203,6 +222,19 @@ let questions = [
 
 ]
 
+// function incrementScore() {
+//     let oldScore = parseInt(document.getElementById('score').innerText);
+//     document.getElementById('score').innerText = ++oldScore;
+// }
+
+
+// /**
+//  * Gets the current tally of incorrect answers from the DOM and increments it by 1
+//  */
+// function incrementWrongAnswer() {
+//     let oldScore = parseInt(document.getElementById('incorrect').innerText);
+//     document.getElementById('incorrect-score').innerText = ++oldScore;
+// }
 
 
 
