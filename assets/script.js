@@ -21,6 +21,9 @@ function startGame() {
 
     // this shuffles all relevant questions for us
     shuffledQuestions = questions.sort(() => Math.random() - .5);
+
+    // this starts from the very first question in the shuffled questions array
+    currentQuestionIndex = 0
    
     // this removes the hide class and allows the question container to be displayed
     questionContainerElement.classList.remove('hide');
@@ -30,8 +33,11 @@ function startGame() {
 
 // This is going to set the next question when the 'Next' button is clicked
 function setNextQuestion() {
-
+    // this shows the next question at the current question index
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
+
+function showQuestion(question)
 
 // This is when we actually select an answer
 function selectAnswer() {
