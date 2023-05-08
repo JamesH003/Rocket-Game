@@ -20,7 +20,8 @@ let shuffledQuestions, currentQuestionIndex
 // This means that whenever we click on the 'Start' button, it will run the code in the startGame function.
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
-    setNextQuestion()
+    currentQuestionIndex++
+    setNextQuestion();
 })
 
 
@@ -36,7 +37,7 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5);
 
     // this starts from the very first question in the shuffled questions array
-    currentQuestionIndex = 0
+    currentQuestionIndex = 0;
    
     // this removes the hide class and allows the question container to be displayed
     questionContainerElement.classList.remove('hide');
@@ -122,5 +123,33 @@ const questions = [
             { text: '4', correct: true},
             { text: '22', correct: false}
         ]
+    },
+    {
+        question: 'What is 4 + 2?', 
+        answers: [
+            { text: '6', correct: true},
+            { text: '50', correct: false}
+        ]
+    }, 
+    {
+        question: 'What is 10 + 10?', 
+        answers: [
+            { text: '20', correct: true},
+            { text: '23', correct: false},
+            { text: '81', correct: false},
+            { text: '3', correct: false}
+        ]
     }
+
 ]
+
+
+
+
+// function to keep score
+
+// function for 30 second timer 
+
+// function for time of day 
+
+// function to initiate launch sequence 
