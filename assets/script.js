@@ -24,7 +24,8 @@ nextBtn.addEventListener('click', () => {
     nextQuestion();
 })
 
-startBtn.addEventListener('click', countdown)
+// To start countdown timer when 'Start' is clicked
+startBtn.addEventListener('click', countdown);
 
 
     
@@ -120,6 +121,7 @@ function setStatus(element, correct) {
     removeStatus(element)
     if (correct) {
         element.classList.add('correct')
+        // increment correct score - *bug* incrementing correct score by 2 and incorrect score by 1
         incrementScore();
     } else {
         element.classList.add('incorrect')
@@ -140,7 +142,7 @@ function incrementScore() {
 
 
 // to get the current time of day
-function getHours();
+// function getHours();
 
 
 

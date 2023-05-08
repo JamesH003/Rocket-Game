@@ -8,36 +8,39 @@
     <title>Rocket Launch</title>
 </head>
 <body>
-    <!-- countdown timer -->
-    <div id="countdown-timer"></div>
+    <div class="background-img"></div>
+        <!-- <img src="assets/images/pexels-spacex-23764.jpg" alt="starry sky during rocket launch"> -->
+        <!-- countdown timer -->
+        <div id="countdown-timer"></div>
 
-    <!-- score area -->
-    <div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect-score">0</span></p>
-    </div>
+        <!-- score area -->
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <p class="scores">Incorrect Answers <span id="incorrect-score">0</span></p>
+        </div>
 
-    <div class="main-div">
-        <!-- Question and answers section -->
-        <div id="question-card" class="hidden">
-            <!-- Question -->
-            <div id="question">Question</div>
+        <div class="main-div">
+            <!-- Question and answers section -->
+            <div id="question-card" class="hidden">
+                <!-- Question -->
+                <div id="question">Question</div>
+                
+                <!-- Four possible answers in button grid -->
+                <div id="answer-buttons" class="buttons-grid">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+            </div>
             
-            <!-- Four possible answers in button grid -->
-            <div id="answer-buttons" class="buttons-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+            <!-- Start and Next button controls -->
+            <div class="control-btns">
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hidden">Next</button>
             </div>
         </div>
-        
-        <!-- Start and Next button controls -->
-        <div class="control-btns">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hidden">Next</button>
-        </div>
-    </div>
+    
 <script src="assets/script.js"></script>
 </body>
 </html>

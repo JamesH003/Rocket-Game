@@ -14,8 +14,16 @@
     --color-correct-ans: #1fc461;
 }
 
+.background-img {
+    background-size: cover;
+    background-image: url(images/pexels-spacex-23764.jpg);
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
-    background-color: var(--color-base);
+    /* background-color: var(--color-base); */
+    
     padding: 0;
     margin: 0;
     display: flex;
@@ -37,6 +45,7 @@ body.incorrect {
 
 /* main div */
 .main-div {
+    position: absolute;
     width: 800px;
     max-width: 80%;
     background-color: #fff;
