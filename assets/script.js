@@ -41,6 +41,7 @@ function startGame() {
     setNextQuestion();
 }
 
+
 // This is going to set the next question when the 'Next' button is clicked
 function setNextQuestion() {
     // resets everything back to its default state everytime we set a new question
@@ -77,20 +78,30 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct
-    setStatusClass(document.body.correct)
+    setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    // shows the 'Next' button after you answer a question
+    nextButton.classList.remove('hide')
 }
 
+// sets the status of both the selected answer button and the body - changes the color to green or red depending on whether the answer is correct or incorrect
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
-        element.classList.add('correct');
+        element.classList.add('correct')
     } else {
-        element.classList.add('incorrect');
+        element.classList.add('incorrect')
     }
 }
+
+// clears the status from the previous question (green or red color)
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('incorrect')
+}
+
 
 
 // setting a list of questions and initialising it to an array
