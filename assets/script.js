@@ -44,18 +44,18 @@ function startQuiz() {
 // This is going to set the next question when the 'Next' button is clicked
 function nextQuestion() {
     // resets everything back to its default state everytime we set a new question
-    resetState()
+    resetDefault()
     // this shows the next question at the current question index
-    showQuestion(randomQuestions[currentQuestion]);
+    displayQuestion(randomQuestions[currentQuestion]);
 }
 
 
 // ???????????????? question.question
 // assigns buttons to the various answers for the user to choose from?
-function showQuestion(question) {
+function displayQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        const button = document.createElement('button');
+        let button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
         if (answer.correct) {
@@ -66,8 +66,8 @@ function showQuestion(question) {
     })
 }
 
-function resetState() {
-    clearStatusClass(document.body);
+function resetDefault() {
+    removeStatus(document.body);
     nextBtn.classList.add('hidden');
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild)
@@ -76,11 +76,11 @@ function resetState() {
 
 // This is when we actually select an answer
 function userAnswer(e) {
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
+    let selectedButton = e.target;
+    let correct = selectedButton.dataset.correct
+    setStatus(document.body, correct)
     Array.from(answerButtons.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+        setStatus(button, button.dataset.correct)
     })
     if (randomQuestions.length > currentQuestion + 1) {
         // shows the 'Next' button after you answer a question
@@ -93,8 +93,8 @@ function userAnswer(e) {
 }
 
 // sets the status of both the selected answer button and the body - changes the color to green or red depending on whether the answer is correct or incorrect
-function setStatusClass(element, correct) {
-    clearStatusClass(element)
+function setStatus(element, correct) {
+    removeStatus(element)
     if (correct) {
         element.classList.add('correct')
     } else {
@@ -103,7 +103,7 @@ function setStatusClass(element, correct) {
 }
 
 // clears the status from the previous question (green or red color)
-function clearStatusClass(element) {
+function removeStatus(element) {
     element.classList.remove('correct')
     element.classList.remove('incorrect')
 }
@@ -111,7 +111,7 @@ function clearStatusClass(element) {
 
 
 // setting a list of questions and initialising it to an array
-const questions = [
+let questions = [
     {
         question: 'Who was the first animal to orbit the Earth', 
         answers: [
