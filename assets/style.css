@@ -35,8 +35,8 @@ body.incorrect {
     background-color: var(--color-incorrect-ans);
 }
 
-/* main container */
-.container {
+/* main div */
+.main-div {
     width: 800px;
     max-width: 80%;
     background-color: #fff;
@@ -46,7 +46,7 @@ body.incorrect {
 }
 
 /* answer buttons */
-.btn-grid {
+.buttons-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
@@ -82,12 +82,12 @@ body.incorrect {
     padding: 10px 20px;
 }
 
-.controls {
+.control-btns {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hide {
+.hidden {
     display: none;
 }

@@ -1,57 +1,52 @@
-// defines the var startButton as the 'Start' button 
-const startButton = document.getElementById('start-btn');
-// defines the var questionContainerElement as the Question container
+let startBtn = document.getElementById('start-btn');
 
-// defines the var nextButton as the 'Next' button
-const nextButton = document.getElementById('next-btn');
+let nextBtn = document.getElementById('next-btn');
 
-const questionContainerElement = document.getElementById('question-container')
+let questionCard = document.getElementById('question-card')
 
-// defines the var questionElement as the question div
-const questionElement = document.getElementById('question')
+let questionElement = document.getElementById('question')
 
-// defines the var answerButtonsElement as the answer buttons div
-const answerButtonsElement = document.getElementById('answer-buttons')
+let answerButtons = document.getElementById('answer-buttons')
 
-// this just creates two new variables which will default both to 'undefined'
-let shuffledQuestions, currentQuestionIndex
+// this creates two new variables which will default both to 'undefined'
+let randomQuestions, currentQuestion
 
 
-// This means that whenever we click on the 'Start' button, it will run the code in the startGame function.
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion();
+// This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
+startBtn.addEventListener('click', startQuiz)
+nextBtn.addEventListener('click', () => {
+    currentQuestion++
+    nextQuestion();
 })
 
 
 // -----------------------------------------FUNCTIONS---------------------------------------------------------------
 
 // function to start the game when the 'Start' button is clicked
-function startGame() {
+function startQuiz() {
    
-    // this adds the class of 'hide' and hides the start button once clicked
-    startButton.classList.add('hide');
+    // this adds the class of 'hidden' and hides the start button once clicked
+    startBtn.classList.add('hidden');
 
-    // this shuffles all relevant questions for us
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    // this shuffles all relevant questions for us and produces random order
+    randomQuestions = questions.sort(() => Math.random() - .5);
 
     // this starts from the very first question in the shuffled questions array
-    currentQuestionIndex = 0;
+    currentQuestion = 0;
    
-    // this removes the hide class and allows the question container to be displayed
-    questionContainerElement.classList.remove('hide');
+    // this removes the hidden class and allows the question container to be displayed
+    questionCard.classList.remove('hidden');
 
-    setNextQuestion();
+    nextQuestion();
 }
 
 
 // This is going to set the next question when the 'Next' button is clicked
-function setNextQuestion() {
+function nextQuestion() {
     // resets everything back to its default state everytime we set a new question
     resetState()
     // this shows the next question at the current question index
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
+    showQuestion(randomQuestions[currentQuestion]);
 }
 
 
@@ -66,33 +61,33 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         } 
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button);
+        button.addEventListener('click', userAnswer)
+        answerButtons.appendChild(button);
     })
 }
 
 function resetState() {
     clearStatusClass(document.body);
-    nextButton.classList.add('hide');
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    nextBtn.classList.add('hidden');
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild)
     }
 }
 
 // This is when we actually select an answer
-function selectAnswer(e) {
+function userAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
-    Array.from(answerButtonsElement.children).forEach(button => {
+    Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    if (randomQuestions.length > currentQuestion + 1) {
         // shows the 'Next' button after you answer a question
-        nextButton.classList.remove('hide') 
+        nextBtn.classList.remove('hidden') 
     } else {
-        startButton.innerText = 'Restart';
-        startButton.classList.remove('hide');
+        startBtn.innerText = 'Restart';
+        startBtn.classList.remove('hidden');
     }
     
 }
