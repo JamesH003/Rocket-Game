@@ -1,6 +1,10 @@
 // defines the var startButton as the 'Start' button 
 const startButton = document.getElementById('start-btn');
 // defines the var questionContainerElement as the Question container
+
+// defines the var nextButton as the 'Next' button
+const nextButton = document.getElementById('next-btn');
+
 const questionContainerElement = document.getElementById('question-container')
 
 // defines the var questionElement as the question div
@@ -21,7 +25,6 @@ startButton.addEventListener('click', startGame)
 
 // function to start the game when the 'Start' button is clicked
 function startGame() {
-    console.log('Started');
    
     // this adds the class of 'hide' and hides the start button once clicked
     startButton.classList.add('hide');
@@ -40,23 +43,34 @@ function startGame() {
 
 // This is going to set the next question when the 'Next' button is clicked
 function setNextQuestion() {
+    // resets everything back to its default state everytime we set a new question
+    resetState()
     // this shows the next question at the current question index
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 
 // ???????????????? question.question
+// assigns buttons to the various answers for the user to choose from?
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         } 
         button.addEventListener('click', selectAnswer)
+        answerButtonsElement.appendChild(button);
     })
+}
+
+function resetState() {
+    nextButton.classList.add('hide');
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    }
 }
 
 // This is when we actually select an answer
