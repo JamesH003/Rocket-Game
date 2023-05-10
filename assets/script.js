@@ -14,7 +14,6 @@ let randomQuestions, currentQuestion
 // countdown timer 
 let countdownTimer = 30;
 let timer = document.getElementById('countdown-timer');
-let timerId = setInterval(countdown, 1000);
 
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
@@ -36,6 +35,8 @@ startBtn.addEventListener('click', countdown);
 
 // function to start the game when the 'Start' button is clicked
 function startQuiz() {
+    
+    timerId = setInterval(countdown, 1000);
    
     // this adds the class of 'hidden' and hides the start button once clicked
     startBtn.classList.add('hidden');
