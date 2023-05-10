@@ -15,6 +15,10 @@ let randomQuestions, currentQuestion
 let countdownTimer = 30;
 let timer = document.getElementById('countdown-timer');
 
+// score counters
+let scoreIncremented = false;
+let scoreDecremented = false;
+
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
 startBtn.addEventListener('click', startQuiz)
@@ -101,15 +105,18 @@ function resetDefault() {
 
 // This is when we actually select an answer
 function userAnswer(e) {
+    console.log(e);
     let selectedButton = e.target;
     let correct = selectedButton.dataset.correct
-    setStatus(document.body, correct)
+    setStatus(document.body, correct, selectedButton) // to stop the score incrementing by 2 each time
     Array.from(answerButtons.children).forEach(button => {
-        setStatus(button, button.dataset.correct)
+        setStatus(button, button.dataset.correct, selectedButton)
     })
     if (randomQuestions.length > currentQuestion + 1) {
         // shows the 'Next' button after you answer a question
-        nextBtn.classList.remove('hidden') 
+        nextBtn.classList.remove('hidden');
+        scoreIncremented = false;
+        scoreDecremented = false;
     } else {
         startBtn.innerText = 'Restart';
         startBtn.classList.remove('hidden');
@@ -118,14 +125,22 @@ function userAnswer(e) {
 }
 
 // sets the status of both the selected answer button and the body - changes the color to green or red depending on whether the answer is correct or incorrect
-function setStatus(element, correct) {
-    removeStatus(element)
+function setStatus(element, correct, selectedButton) {
+    removeStatus(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
         // increment correct score - *bug* incrementing correct score by 2 and incorrect score by 1
-        incrementScore();
+
+        // only increment if it hasn't already been for this round
+        if (!scoreIncremented && selectedButton.dataset.correct) {
+            incrementCorrectScore();
+        }
     } else {
-        element.classList.add('incorrect')
+        element.classList.add('incorrect');
+        // only decrement if it hasn't already been for this round
+        if (!scoreDecremented && selectedButton.dataset.correct == undefined) {
+            incrementIncorrectScore();
+        }
     }
 }
 
@@ -135,10 +150,18 @@ function removeStatus(element) {
     element.classList.remove('incorrect')
 }
 
-function incrementScore() {
+// increment the number of correct scores
+function incrementCorrectScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore;
+    scoreIncremented = true;
+}
 
+// increment the number of incorrect scores
+function incrementIncorrectScore() {
+    let oldScore = parseInt(document.getElementById('incorrect-score').innerText);
+    document.getElementById('incorrect-score').innerText = ++oldScore;
+    scoreDecremented = true;
 }
 
 
