@@ -26,7 +26,7 @@ let rulesModal = document.getElementById("rules-modal");
 let rulesBtn = document.getElementById("rules-button");
 
 // Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close-rules-modal")[0];
+let closeBtn = document.getElementsByClassName("close-rules-modal")[0];
 
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
@@ -39,7 +39,11 @@ nextBtn.addEventListener('click', () => {
 // To start countdown timer when 'Start' is clicked
 startBtn.addEventListener('click', countdown);
 
+// Runs the openModal function when Rules button is clicked
+rulesBtn.addEventListener('click', openModal);
 
+// Runs the closeModal function when the X is clicked
+closeBtn.addEventListener('click', closeModal);
     
     
 
@@ -54,6 +58,7 @@ function startQuiz() {
     // this adds the class of 'hidden' and hides the start button once clicked
     startBtn.classList.add('hidden');
 
+    // this hides the rules button once the start button is clicked
     rulesBtn.classList.add('hidden');
 
     // this shuffles all relevant questions for us and produces random order
@@ -76,6 +81,25 @@ function countdown() {
     } else {
       timer.innerHTML = countdownTimer + ' :00';
       countdownTimer--;
+    }
+  }
+
+// Rules modal
+// When the user clicks on the button, open the modal
+function openModal() {
+    rulesModal.style.display = "block";
+  }
+  
+// When the user clicks on <span> (x), close the modal
+function closeModal() {
+    rulesModal.style.display = 'none';
+  }
+  
+// When the user clicks anywhere outside of the modal, close it
+// ASK ABOUT THIS???????????
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      rulesModal.style.display = "none";
     }
   }
 
@@ -285,19 +309,3 @@ let questions = [
 
 
 
-// When the user clicks on the button, open the modal
-rulesBtn.onclick = function() {
-  rulesModal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  rulesModal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    rulesModal.style.display = "none";
-  }
-}
