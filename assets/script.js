@@ -19,6 +19,15 @@ let timer = document.getElementById('countdown-timer');
 let scoreIncremented = false;
 let scoreDecremented = false;
 
+// Get the modal
+let rulesModal = document.getElementById("rules-modal");
+
+// Get the button that opens the modal
+let rulesBtn = document.getElementById("rules-button");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close-rules-modal")[0];
+
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
 startBtn.addEventListener('click', startQuiz)
@@ -44,6 +53,8 @@ function startQuiz() {
    
     // this adds the class of 'hidden' and hides the start button once clicked
     startBtn.classList.add('hidden');
+
+    rulesBtn.classList.add('hidden');
 
     // this shuffles all relevant questions for us and produces random order
     randomQuestions = questions.sort(() => Math.random() - .5);
@@ -272,17 +283,10 @@ let questions = [
 
 // function to initiate launch sequence 
 
-// Get the modal
-let rulesModal = document.getElementById("rules-modal");
 
-// Get the button that opens the modal
-let rulesButton = document.getElementById("rules-button");
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close-rules-modal")[0];
 
 // When the user clicks on the button, open the modal
-rulesButton.onclick = function() {
+rulesBtn.onclick = function() {
   rulesModal.style.display = "block";
 }
 
