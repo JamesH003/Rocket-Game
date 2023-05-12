@@ -28,6 +28,8 @@ let rulesBtn = document.getElementById("rules-button");
 // Get the <span> element that closes the modal
 let closeBtn = document.getElementsByClassName("close-rules-modal")[0];
 
+let nightScene = document.getElementsByClassName('background-img-night');
+let dayScene = document.getElementsByClassName('background-img-day');
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
 startBtn.addEventListener('click', startQuiz)
@@ -96,7 +98,7 @@ function closeModal() {
   }
   
 // When the user clicks anywhere outside of the modal, close it
-// ASK ABOUT THIS???????????
+// ASK ABOUT THIS???????????---------------------------------------------------------<<<<<<
   window.onclick = function(event) {
     if (event.target == modal) {
       rulesModal.style.display = "none";
@@ -143,7 +145,7 @@ function userAnswer(e) {
     console.log(e);
     let selectedButton = e.target;
     let correct = selectedButton.dataset.correct
-    setStatus(document.body, correct, selectedButton) // to stop the score incrementing by 2 each time
+    setStatus(document.body, correct, selectedButton)
     Array.from(answerButtons.children).forEach(button => {
         setStatus(button, button.dataset.correct, selectedButton)
     })
@@ -201,8 +203,22 @@ function incrementIncorrectScore() {
 
 
 // to get the current time of day
-// function getHours();
+// function getHours() {
+//     return
+// }
 
+
+    let today = new Date();
+    let hours = today.getHours();
+
+console.log(hours);
+function timeOfDay(hours) {
+    if (hours < 18) {
+        nightScene.classList.add('hidden');
+    } else {
+        dayScene.classList.add('hidden');
+    }
+}
 
 
 
