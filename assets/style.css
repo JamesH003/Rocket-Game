@@ -43,6 +43,13 @@ body.incorrect {
     background-color: var(--color-incorrect-ans);
 }
 
+.timer-container {
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    /* position: absolute; */
+}
+
 /* main div */
 .main-div {
     position: absolute;
@@ -85,7 +92,7 @@ body.incorrect {
     background-color: var(--color-incorrect-ans);
 }
 
-.start-btn, .next.btn {
+.start-btn, .next.btn, .rules-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
