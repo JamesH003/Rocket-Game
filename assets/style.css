@@ -14,19 +14,19 @@
     --color-correct-ans: #1fc461;
 }
 
-.background-img-day {
+#bg-img {
     background-size: cover;
-    background-image: url(images/spacex-XRAmDxBQy_Q-unsplash.jpg);
+    /* background-image: url(images/spacex-XRAmDxBQy_Q-unsplash.jpg); */
     width: 100vw;
     height: 100vh;
 }
 
-.background-img-night {
+/* .background-img-night {
     background-size: cover;
     background-image: url(images/pexels-spacex-23764.jpg);
     width: 100vw;
     height: 100vh;
-}
+} */
 
 body {
     /* background-color: var(--color-base); */

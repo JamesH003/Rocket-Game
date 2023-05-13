@@ -28,8 +28,9 @@ let rulesBtn = document.getElementById("rules-button");
 // Get the <span> element that closes the modal
 let closeBtn = document.getElementsByClassName("close-rules-modal")[0];
 
-let nightScene = document.getElementsByClassName('background-img-night');
-let dayScene = document.getElementsByClassName('background-img-day');
+// let nightScene = document.getElementsByClassName('background-img-night');
+// let dayScene = document.getElementsByClassName('background-img-day');
+let bgImg = document.getElementById('bg-img')
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
 startBtn.addEventListener('click', startQuiz)
@@ -46,17 +47,17 @@ rulesBtn.addEventListener('click', openModal);
 
 // Runs the closeModal function when the X is clicked
 closeBtn.addEventListener('click', closeModal);
-    
-    
+
+
 
 
 // -----------------------------------------FUNCTIONS---------------------------------------------------------------
 
 // function to start the game when the 'Start' button is clicked
 function startQuiz() {
-    
+
     timerId = setInterval(countdown, 1000);
-   
+
     // this adds the class of 'hidden' and hides the start button once clicked
     startBtn.classList.add('hidden');
 
@@ -68,7 +69,7 @@ function startQuiz() {
 
     // this starts from the very first question in the shuffled questions array
     currentQuestion = 0;
-   
+
     // this removes the hidden class and allows the question container to be displayed
     questionCard.classList.remove('hidden');
 
@@ -78,32 +79,32 @@ function startQuiz() {
 // countdown timer
 function countdown() {
     if (countdownTimer == -1) {
-      clearTimeout(timerId);
-      initiateSelfDestruct();
+        clearTimeout(timerId);
+        initiateSelfDestruct();
     } else {
-      timer.innerHTML = countdownTimer + ' :00';
-      countdownTimer--;
+        timer.innerHTML = countdownTimer + ' :00';
+        countdownTimer--;
     }
-  }
+}
 
 // Rules modal
 // When the user clicks on the button, open the modal
 function openModal() {
     rulesModal.style.display = "block";
-  }
-  
+}
+
 // When the user clicks on <span> (x), close the modal
 function closeModal() {
     rulesModal.style.display = 'none';
-  }
-  
+}
+
 // When the user clicks anywhere outside of the modal, close it
 // ASK ABOUT THIS???????????---------------------------------------------------------<<<<<<
-  window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
-      rulesModal.style.display = "none";
+        rulesModal.style.display = "none";
     }
-  }
+}
 
 
 // This is going to set the next question when the 'Next' button is clicked
@@ -126,7 +127,7 @@ function displayQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
 
-        } 
+        }
         button.addEventListener('click', userAnswer)
         answerButtons.appendChild(button);
     })
@@ -158,7 +159,7 @@ function userAnswer(e) {
         startBtn.innerText = 'Restart';
         startBtn.classList.remove('hidden');
     }
-    
+
 }
 
 // sets the status of both the selected answer button and the body - changes the color to green or red depending on whether the answer is correct or incorrect
@@ -208,92 +209,180 @@ function incrementIncorrectScore() {
 // }
 
 
-    let today = new Date();
-    let hours = today.getHours();
+let today = new Date();
+let hours = today.getHours();
 
 console.log(hours);
-function timeOfDay(hours) {
+
+function timeOfDay() {
     if (hours < 18) {
-        nightScene.classList.add('hidden');
+        bgImg.style.backgroundImage = "assets/images/bg-day.jpg";
     } else {
-        dayScene.classList.add('hidden');
+        bgImg.style.backgroundImage = "assets/images/bg-night.jpg";
     }
 }
 
 
 
 // setting a list of questions and initialising it to an array
-let questions = [
-    {
-        question: 'Who was the first animal to orbit the Earth', 
-        answers: [
-            { text: 'Laika the Dog', correct: true},
-            { text: 'Edward the Elephany', correct: false},
-            { text: 'Bernard the Monkey', correct: false},
-            { text: 'Ham the Chimp', correct: false},
+let questions = [{
+        question: 'Who was the first animal to orbit the Earth',
+        answers: [{
+                text: 'Laika the Dog',
+                correct: true
+            },
+            {
+                text: 'Edward the Elephant',
+                correct: false
+            },
+            {
+                text: 'Bernard the Monkey',
+                correct: false
+            },
+            {
+                text: 'Ham the Chimp',
+                correct: false
+            },
         ]
     },
     {
-        question: 'Who was the first man to walk on the moon?', 
-        answers: [
-            { text: 'Michael Jackson', correct: false},
-            { text: 'Buzz Lightyear', correct: false},
-            { text: 'Neil Armstrong', correct: true},
-            { text: 'Michael Collins', correct: false},
-        ]
-    }, 
-    {
-        question: 'What does the "ISS" stand for?', 
-        answers: [
-            { text: 'Instant Salami Sandwich', correct: false},
-            { text: 'Ionic Space Shield', correct: false},
-            { text: 'Incredible Space Suit', correct: false},
-            { text: 'International Space Station', correct: true}
-        ]
-    },
-    {
-        question: 'How far away is the Sun?', 
-        answers: [
-            { text: '200 Thousand Miles', correct: false},
-            { text: '93 Million Miles', correct: true},
-            { text: '88 Billion Miles', correct: false},
-            { text: 'Quadrillion Miles', correct: false}
+        question: 'Who was the first man to walk on the moon?',
+        answers: [{
+                text: 'Michael Jackson',
+                correct: false
+            },
+            {
+                text: 'Buzz Lightyear',
+                correct: false
+            },
+            {
+                text: 'Neil Armstrong',
+                correct: true
+            },
+            {
+                text: 'Michael Collins',
+                correct: false
+            },
         ]
     },
     {
-        question: 'Instead of water, what rains on Jupiter?', 
-        answers: [
-            { text: 'Acid', correct: false},
-            { text: 'Iron', correct: false},
-            { text: 'Fire', correct: false},
-            { text: 'Diamonds', correct: true}
+        question: 'What does the "ISS" stand for?',
+        answers: [{
+                text: 'Instant Salami Sandwich',
+                correct: false
+            },
+            {
+                text: 'Ionic Space Shield',
+                correct: false
+            },
+            {
+                text: 'Incredible Space Suit',
+                correct: false
+            },
+            {
+                text: 'International Space Station',
+                correct: true
+            }
         ]
     },
     {
-        question: 'How long does it take for people to go to the moon?', 
-        answers: [
-            { text: '3 days', correct: true},
-            { text: '2 weeks', correct: false},
-            { text: '5 hours', correct: false},
-            { text: '6 days', correct: false}
+        question: 'How far away is the Sun?',
+        answers: [{
+                text: '200 Thousand Miles',
+                correct: false
+            },
+            {
+                text: '93 Million Miles',
+                correct: true
+            },
+            {
+                text: '88 Billion Miles',
+                correct: false
+            },
+            {
+                text: 'Quadrillion Miles',
+                correct: false
+            }
         ]
     },
     {
-        question: 'What is the smallest planet in the Solar System?', 
-        answers: [
-            { text: 'Venus', correct: false},
-            { text: 'Saturn', correct: false},
-            { text: 'Neptune', correct: false},
-            { text: 'Mercury', correct: true}
+        question: 'Instead of water, what rains on Jupiter?',
+        answers: [{
+                text: 'Acid',
+                correct: false
+            },
+            {
+                text: 'Iron',
+                correct: false
+            },
+            {
+                text: 'Fire',
+                correct: false
+            },
+            {
+                text: 'Diamonds',
+                correct: true
+            }
         ]
     },
     {
-        question: 'In what galaxy is the Earth in?', 
-        answers: [
-            { text: 'The Solar Galaxy', correct: false},
-            { text: 'The Milky Way', correct: true},
-            { text: 'The Shiny Way', correct: false},
-            { text: 'Andromeda Galaxy', correct: false}
+        question: 'How long does it take for people to go to the moon?',
+        answers: [{
+                text: '3 days',
+                correct: true
+            },
+            {
+                text: '2 weeks',
+                correct: false
+            },
+            {
+                text: '5 hours',
+                correct: false
+            },
+            {
+                text: '6 days',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What is the smallest planet in the Solar System?',
+        answers: [{
+                text: 'Venus',
+                correct: false
+            },
+            {
+                text: 'Saturn',
+                correct: false
+            },
+            {
+                text: 'Neptune',
+                correct: false
+            },
+            {
+                text: 'Mercury',
+                correct: true
+            }
+        ]
+    },
+    {
+        question: 'In what galaxy is the Earth in?',
+        answers: [{
+                text: 'The Solar Galaxy',
+                correct: false
+            },
+            {
+                text: 'The Milky Way',
+                correct: true
+            },
+            {
+                text: 'The Shiny Way',
+                correct: false
+            },
+            {
+                text: 'Andromeda Galaxy',
+                correct: false
+            }
         ]
     },
 
@@ -322,6 +411,3 @@ let questions = [
 // function for time of day 
 
 // function to initiate launch sequence 
-
-
-
