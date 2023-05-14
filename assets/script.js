@@ -48,6 +48,8 @@ rulesBtn.addEventListener('click', openModal);
 // Runs the closeModal function when the X is clicked
 closeBtn.addEventListener('click', closeModal);
 
+bgImg.addEventListener('load', timeOfDay);
+
 
 
 
@@ -213,14 +215,15 @@ let today = new Date();
 let hours = today.getHours();
 
 console.log(hours);
+timeOfDay();
 
 function timeOfDay() {
     if (hours < 18) {
-        bgImg.style.backgroundImage = "assets/images/bg-day.jpg";
+        bgImg.style.backgroundImage = "url('assets/images/bg-day.jpg')";
     } else {
-        bgImg.style.backgroundImage = "assets/images/bg-night.jpg";
+        bgImg.style.backgroundImage = "url('assets/images/bg-night.jpg')";
     }
-}
+};
 
 
 
