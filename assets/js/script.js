@@ -84,7 +84,7 @@ function countdown() {
         clearTimeout(timerId);
         initiateSelfDestruct();
     } else {
-        timer.innerHTML = countdownTimer + ' :00';
+        timer.innerHTML = countdownTimer +':00';
         countdownTimer--;
     }
 }
@@ -204,6 +204,13 @@ function incrementIncorrectScore() {
     scoreDecremented = true;
 }
 
+function initiateLaunchSequence() {
+    if (oldScore >= 5) {
+        document.getElementById("rocket-launch").style.animation = "rocket-launch 7s 1";
+    }
+}
+
+// initiateLaunchSequence()
 
 // to get the current time of day
 // function getHours() {
