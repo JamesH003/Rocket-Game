@@ -48,7 +48,7 @@ rulesBtn.addEventListener('click', openModal);
 // Runs the closeModal function when the X is clicked
 closeBtn.addEventListener('click', closeModal);
 
-bgImg.addEventListener('load', timeOfDay);
+// bgImg.addEventListener('load', timeOfDay);
 
 
 

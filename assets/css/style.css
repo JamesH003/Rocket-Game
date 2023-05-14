@@ -16,9 +16,10 @@
 
 #bg-img {
     background-size: cover;
-    /* background-image: url(images/spacex-XRAmDxBQy_Q-unsplash.jpg); */5
+    /* background-image: url(images/spacex-XRAmDxBQy_Q-unsplash.jpg); */
     width: 100vw;
     height: 100vh;
+    background-position-x: -250px;
 }
 
 /* .background-img-night {
