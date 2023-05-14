@@ -160,10 +160,26 @@ body.incorrect {
     cursor: pointer;
   }
 
-  #rocket {
+  /* Rocket ship */
+  .rocket {
     height: 9rem;
     width: 7rem;
     bottom: 65px;
     left: 18px;
     position: absolute;
+    animation: rocket-launch;
+    
+    animation-duration: 7s;
   }
+
+  @keyframes rocket-launch {
+    0%{bottom: 65px;}
+    20%{
+        transform: rotate(20deg);
+        transition-timing-function: cubic-bezier(.2,1.66,.9,1.39);}
+    100%{bottom:2000px;}
+    }
+
+    
+
+    
