@@ -175,8 +175,7 @@ body.incorrect {
   @keyframes rocket-launch {
     0%{bottom: 65px;}
     20%{
-        transform: rotate(20deg);
-        transition-timing-function: cubic-bezier(.2,1.66,.9,1.39);}
+        transform: rotate(20deg);}
     100%{bottom:2000px;}
     }
 

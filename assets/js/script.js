@@ -218,7 +218,7 @@ console.log(hours);
 timeOfDay();
 
 function timeOfDay() {
-    if (hours < 18) {
+    if (hours < 18 && hours > 7) {
         bgImg.style.backgroundImage = "url('assets/images/bg-day.jpg')";
     } else {
         bgImg.style.backgroundImage = "url('assets/images/bg-night.jpg')";
