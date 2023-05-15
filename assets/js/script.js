@@ -24,6 +24,8 @@ let rulesModal = document.getElementById("rules-modal");
 let congratsModal = document.getElementById("congrats-modal");
 let failModal = document.getElementById("fail-modal");
 
+let rocket = document.getElementById('rocket-launch');
+
 // Get the button that opens the modal
 let rulesBtn = document.getElementById("rules-button");
 
@@ -90,6 +92,12 @@ function countdown() {
         countdownTimer--;
     }
 }
+
+function initiateSelfDestruct() {
+    rocket.style.display = 'none';
+    // add explosion here
+}
+
 
 // Rules modal
 // When the user clicks on the button, open the modal
