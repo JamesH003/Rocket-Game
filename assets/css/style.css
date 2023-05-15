@@ -221,8 +221,19 @@ body.incorrect {
         background-position-x: unset;
     }
         
+    /* Rocket ship */
+    .rocket {
+        left: 250px;
+    }
+}
 
 @media screen and (min-width: 950px) {}
+
+@media screen and (min-width: 1085px) {
+    /* Rocket ship */
+    .rocket {
+        left: 22.75vw;
+    }
     }
     
 @media screen and (min-width: 1200px) {}
