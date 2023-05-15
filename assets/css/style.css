@@ -63,7 +63,9 @@ body.incorrect {
     position: absolute;
     width: 800px;
     max-width: 80%;
-    background-color: #fff;
+    color: #fefefe;
+    background-color: rgba(50, 50, 50, 0.5);
+    backdrop-filter: blur(3px);
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
