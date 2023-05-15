@@ -1,18 +1,18 @@
+/* jshint esversion: 11 */
+
 let startBtn = document.getElementById('start-btn');
 
 let nextBtn = document.getElementById('next-btn');
-
-let questionCard = document.getElementById('question-card')
-
-let questionElement = document.getElementById('question')
-
-let answerButtons = document.getElementById('answer-buttons')
+let questionCard = document.getElementById('question-card');
+let questionElement = document.getElementById('question');
+let answerButtons = document.getElementById('answer-buttons');
 
 // this creates two new variables which will default both to 'undefined'
-let randomQuestions, currentQuestion
+let randomQuestions, currentQuestion;
 
 // countdown timer 
 let countdownTimer = 30;
+let timerId;
 let timer = document.getElementById('countdown-timer');
 
 // score counters
@@ -34,14 +34,14 @@ let closeBtn = document.getElementsByClassName("close-rules-modal")[0];
 
 // let nightScene = document.getElementsByClassName('background-img-night');
 // let dayScene = document.getElementsByClassName('background-img-day');
-let bgImg = document.getElementById('bg-img')
+let bgImg = document.getElementById('bg-img');
 
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
-startBtn.addEventListener('click', startQuiz)
+startBtn.addEventListener('click', startQuiz);
 nextBtn.addEventListener('click', () => {
-    currentQuestion++
+    currentQuestion++;
     nextQuestion();
-})
+});
 
 // To start countdown timer when 'Start' is clicked
 startBtn.addEventListener('click', countdown);
@@ -71,7 +71,7 @@ function startQuiz() {
     rulesBtn.classList.add('hidden');
 
     // this shuffles all relevant questions for us and produces random order
-    randomQuestions = questions.sort(() => Math.random() - .5);
+    randomQuestions = questions.sort(() => Math.random() - 0.5);
 
     // this starts from the very first question in the shuffled questions array
     currentQuestion = 0;
@@ -88,13 +88,13 @@ function countdown() {
         clearTimeout(timerId);
         initiateSelfDestruct();
     } else {
-        timer.innerHTML = countdownTimer +':00';
+        timer.innerHTML = countdownTimer + ':00';
         countdownTimer--;
     }
 }
 
 function initiateSelfDestruct() {
-    rocket.style.display = 'none';
+    // rocket.style.display = 'none';
     // add explosion here
 }
 
@@ -141,7 +141,7 @@ window.onclick = function (event) {
 // This is going to set the next question when the 'Next' button is clicked
 function nextQuestion() {
     // resets everything back to its default state everytime we set a new question
-    resetDefault()
+    resetDefault();
     // this shows the next question at the current question index
     displayQuestion(randomQuestions[currentQuestion]);
 }
@@ -159,16 +159,16 @@ function displayQuestion(question) {
             button.dataset.correct = answer.correct;
 
         }
-        button.addEventListener('click', userAnswer)
+        button.addEventListener('click', userAnswer);
         answerButtons.appendChild(button);
-    })
+    });
 }
 
 function resetDefault() {
     removeStatus(document.body);
     nextBtn.classList.add('hidden');
     while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild)
+        answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
@@ -176,8 +176,8 @@ function resetDefault() {
 function userAnswer(e) {
     console.log(e);
     let selectedButton = e.target;
-    let correct = selectedButton.dataset.correct
-    setStatus(document.body, correct, selectedButton)
+    let correct = selectedButton.dataset.correct;
+    setStatus(document.body, correct, selectedButton);
     Array.from(answerButtons.children).forEach(button => {
         setStatus(button, button.dataset.correct, selectedButton)
     })
@@ -215,8 +215,8 @@ function setStatus(element, correct, selectedButton) {
 
 // clears the status from the previous question (green or red color)
 function removeStatus(element) {
-    element.classList.remove('correct')
-    element.classList.remove('incorrect')
+    element.classList.remove('correct');
+    element.classList.remove('incorrect');
 }
 
 // increment the number of correct scores
