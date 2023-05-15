@@ -10,81 +10,81 @@
 </head>
 
 <body id="bg-img">
-        <!-- <img src="assets/images/pexels-spacex-23764.jpg" alt="starry sky during rocket launch"> -->
-        <!-- countdown timer -->
-        <span class="timer-container">
-            <span id="countdown-timer"></span>
-        </span>
+    <!-- <img src="assets/images/pexels-spacex-23764.jpg" alt="starry sky during rocket launch"> -->
+    <!-- countdown timer -->
+    <span class="timer-container">
+        <span id="countdown-timer"></span>
+    </span>
 
-        <!-- rocket-ship -->
-        <div id="rocket-div">
-            <img class="rocket" id="rocket-launch" src="assets/images/rocket.png" alt="rocket ship">
-        </div>
+    <!-- rocket-ship -->
+    <div id="rocket-div">
+        <img class="rocket" id="rocket-launch" src="assets/images/rocket.png" alt="rocket ship">
+    </div>
 
-        <!-- score area -->
-        <div class="score-area">
-            <p class="scores">Correct Answers: <span id="score">0</span></p>
-            <p class="scores">Incorrect Answers: <span id="incorrect-score">0</span></p>
-        </div>
+    <!-- score area -->
+    <div id="score-area" class="score-area">
+        <p class="scores">Correct Answers: <span id="score">0</span></p>
+        <p class="scores">Incorrect Answers: <span id="incorrect-score">0</span></p>
+    </div>
 
     <div id="main-box" class="main-div">
-            <!-- Question and answers section -->
-            <div id="question-card" class="hidden">
-                <!-- Question -->
-                <div id="question">Question</div>
-                
-                <!-- Four possible answers in button grid -->
-                <div id="answer-buttons" class="buttons-grid">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
+        <!-- Question and answers section -->
+        <div id="question-card" class="hidden">
+            <!-- Question -->
+            <div id="question">Question</div>
+
+            <!-- Four possible answers in button grid -->
+            <div id="answer-buttons" class="buttons-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
             </div>
-            
-            <!-- Start, Rules Next button controls -->
-            <div class="control-btns">
-                <button id="start-btn" class="start-btn btn">Start</button>
-                <!-- Trigger/Open The Modal -->
-                <button id="rules-button" class="rules-btn btn">Rules</button>
-                <button id="next-btn" class="next-btn btn hidden">Next</button>
-            </div>
+        </div>
+
+        <!-- Start, Rules Next button controls -->
+        <div class="control-btns">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <!-- Trigger/Open The Modal -->
+            <button id="rules-button" class="rules-btn btn">Rules</button>
+            <button id="next-btn" class="next-btn btn hidden">Next</button>
+        </div>        
     </div>
 
-            <!-- Rules modal -->
-            <div id="rules-modal" class="modal">
-                <!-- Rules modal content -->
-                <div class="modal-content">
-                    <span class="close-rules-modal">&times;</span>
-                    <h1>Rocket Launch Rules</h1>
-                    <p>-The aim of the game is to launch the rocket.<br>
-                        -You will have 30 seconds to get at least 5 correct answers to initiate the launch sequence.<br>
-                        -Once you click ‘Start’ the countdown timer will begin.<br>
-                        -3 incorrect answers will initiate the self destruct sequence.<br>
-                        -Good luck! </p>
-                </div>
-            </div>
-
-            <div id="congrats-modal" class="modal">
-                <!-- Congratulations modal content -->
-                <div class="modal-content">
-                    <span class="close-congrats-modal">&times;</span>
-                    <h1>Congratulations!</h1>
-                    <p>You have successfully completed the mission and launched the rocket! <br>
-                        Would you like to play again?</p>
-                </div>
-            </div>
-
-            <div id="fail-modal" class="modal">
-                <!-- Commiserations modal content -->
-                <div class="modal-content">
-                    <span class="close-fail-modal">&times;</span>
-                    <h1>Oh no!</h1>
-                    <p>You have failed to complete the mission which has initiated the self destruct function... <br>
-                        Would you like to play again?</p>
+    <!-- Rules modal -->
+    <div id="rules-modal" class="modal">
+        <!-- Rules modal content -->
+        <div class="modal-content">
+            <span class="close-rules-modal">&times;</span>
+            <h1>Rocket Launch Rules</h1>
+            <p>-The aim of the game is to launch the rocket.<br>
+                -You will have 30 seconds to get at least 5 correct answers to initiate the launch sequence.<br>
+                -Once you click ‘Start’ the countdown timer will begin.<br>
+                -3 incorrect answers will initiate the self destruct sequence.<br>
+                -Good luck! </p>
         </div>
     </div>
-<script src="assets/js/script.js"></script>
+
+    <div id="congrats-modal" class="modal">
+        <!-- Congratulations modal content -->
+        <div class="modal-content">
+            <span class="close-congrats-modal">&times;</span>
+            <h1>Congratulations!</h1>
+            <p>You have successfully completed the mission and launched the rocket! <br>
+                Would you like to play again?</p>
+        </div>
+    </div>
+
+    <div id="fail-modal" class="modal">
+        <!-- Commiserations modal content -->
+        <div class="modal-content">
+            <span class="close-fail-modal">&times;</span>
+            <h1>Oh no!</h1>
+            <p>You have failed to complete the mission which has initiated the self destruct function... <br>
+                Would you like to play again?</p>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
