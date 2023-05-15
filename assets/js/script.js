@@ -21,6 +21,8 @@ let scoreDecremented = false;
 
 // Get the modal
 let rulesModal = document.getElementById("rules-modal");
+let congratsModal = document.getElementById("congrats-modal");
+let failModal = document.getElementById("fail-modal");
 
 // Get the button that opens the modal
 let rulesBtn = document.getElementById("rules-button");
@@ -43,7 +45,7 @@ nextBtn.addEventListener('click', () => {
 startBtn.addEventListener('click', countdown);
 
 // Runs the openModal function when Rules button is clicked
-rulesBtn.addEventListener('click', openModal);
+rulesBtn.addEventListener('click', openRulesModal);
 
 // Runs the closeModal function when the X is clicked
 closeBtn.addEventListener('click', closeModal);
@@ -91,13 +93,30 @@ function countdown() {
 
 // Rules modal
 // When the user clicks on the button, open the modal
-function openModal() {
+function openRulesModal() {
     rulesModal.style.display = "block";
+
+}
+
+// Congrats modal
+// When the user clicks on the button, open the modal
+function openCongratsModal() {
+    congratsModal.style.display = "block";
+
+}
+
+// Fail modal
+// When the user clicks on the button, open the modal
+function openFailModal() {
+    failModal.style.display = "block";
+
 }
 
 // When the user clicks on <span> (x), close the modal
 function closeModal() {
     rulesModal.style.display = 'none';
+    congratsModal.style.display = 'none';
+    failModal.style.display = 'none';
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -107,6 +126,8 @@ window.onclick = function (event) {
         rulesModal.style.display = "none";
     }
 }
+
+
 
 
 // This is going to set the next question when the 'Next' button is clicked
