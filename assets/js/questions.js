@@ -1,5 +1,8 @@
+/* jshint esversion: 11 */
+
 // setting a list of questions and initialising it to an array
-const questions = [{
+const questions = [
+    {
         question: 'Who was the first animal to orbit the Earth',
         answers: [{
                 text: 'Laika the Dog',
