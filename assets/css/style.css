@@ -226,4 +226,7 @@ body.incorrect {
     }
     
 @media screen and (min-width: 1200px) {}
+
+.disable {
+    pointer-events: none;
     }
