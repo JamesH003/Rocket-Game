@@ -178,7 +178,17 @@ body.incorrect {
     position: absolute;
     animation: rocket-launch;
     
-    animation-duration: 15s;
+#explosion {
+    bottom: 20px;
+    left: 147px;
+    position: absolute;
+}
+
+#fire {
+    bottom: 43px;
+    left: 147px;
+    height: 14em;
+    position: absolute;
   }
 
   @keyframes rocket-launch {
