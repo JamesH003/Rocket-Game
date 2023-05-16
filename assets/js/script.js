@@ -25,6 +25,8 @@ let congratsModal = document.getElementById("congrats-modal");
 let failModal = document.getElementById("fail-modal");
 
 let rocket = document.getElementById('rocket-launch');
+let explosion = document.getElementById('explosion');
+let fire = document.getElementById('fire');
 
 // Get the button that opens the modal
 let rulesBtn = document.getElementById("rules-button");
@@ -94,10 +96,21 @@ function countdown() {
 }
 
 function initiateSelfDestruct() {
-    // rocket.style.display = 'none';
-    // add explosion here
+    if (countdownTimer == -1) {
+        clearTimeout(timerId);
+        rocket.style.display = 'none';
+        explosion.style.display = 'block';
+        setTimeout(() => {
+            timer.classList.add('hidden');
+            fire.style.display = 'block';
+        }, 800);  
+    } else {
+        timer.innerHTML = countdownTimer + ':00';
+        countdownTimer--;
 }
-
+}
+timer.innerHTML = countdownTimer + ':00';
+        countdownTimer--;
 
 // Rules modal
 // When the user clicks on the button, open the modal
