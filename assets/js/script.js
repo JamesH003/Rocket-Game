@@ -86,31 +86,42 @@ function startQuiz() {
 
 // countdown timer
 function countdown() {
-    if (countdownTimer == -1) {
-        clearTimeout(timerId);
+    if (countdownTimer < 0 && correctScore < 5) {
+        // no time left, and not enough correct answers
+        hideElements();
         initiateSelfDestruct();
     } else {
         timer.innerHTML = countdownTimer + ':00';
         countdownTimer--;
     }
+    // if (countdownTimer < 0  && incorrectScore >= 3) {
+    //     // no time left, and too many incorrect answers
+    //     // do nothing here? not needed? already triggered
+    // } else if (countdownTimer < 0 && correctScore < 5) {
+    //     // no time left, and not enough correct answers
+    //     hideElements();
+    //     initiateSelfDestruct();
+    // } else {
+    //     timer.innerHTML = countdownTimer + ':00';
+    //     countdownTimer--;
+    // }
 }
 
 function initiateSelfDestruct() {
-    if (countdownTimer == -1) {
-        clearTimeout(timerId);
+    // if (countdownTimer <= 0) {
+        setTimeout(() => {
+            clearInterval(timerId);
         rocket.style.display = 'none';
         explosion.style.display = 'block';
         setTimeout(() => {
             timer.classList.add('hidden');
             fire.style.display = 'block';
-        }, 800);  
-    } else {
-        timer.innerHTML = countdownTimer + ':00';
-        countdownTimer--;
+        }, 6000);  
+    // } else {
+    //     timer.innerHTML = countdownTimer + ':00';
+    //     countdownTimer--;
+    // }
 }
-}
-timer.innerHTML = countdownTimer + ':00';
-        countdownTimer--;
 
 // Rules modal
 // When the user clicks on the button, open the modal
