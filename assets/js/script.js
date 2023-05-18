@@ -27,6 +27,7 @@ let failModal = document.getElementById("fail-modal");
 let rocket = document.getElementById('rocket-launch');
 let explosion = document.getElementById('explosion');
 let fire = document.getElementById('fire');
+let twinkle = document.getElementById('twinkle');
 
 // Get the button that opens the modal
 let rulesBtn = document.getElementById("rules-button");
@@ -258,8 +259,9 @@ function incrementIncorrectScore() {
 }
 
 function initiateLaunchSequence() {
-    if (oldScore >= 5) {
-        document.getElementById("rocket-launch").style.animation = "rocket-launch 7s 1";
+        setTimeout(() => {
+            twinkle.style.display = 'block'
+        }, 15000);       
     }
 }
 
