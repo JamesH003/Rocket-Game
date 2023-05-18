@@ -32,6 +32,34 @@ body {
     background-position: bottom left;
 }
 
+#homepage-body {
+    background: url(/assets/images/space-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+#homepage-rocket {
+    /* height: 10em;
+    width: 10em; */
+    width: 20%;
+    animation: shake 0.5s infinite;
+}
+
+#homepage-header {
+        font-size: 7em;
+        color: #ff13e4;
+        text-shadow: 5px 5px yellow;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    
+#begin-mission-link {
+    font-size: 2em;
+        color: #ff13e4;
+        text-shadow: 2px 2px yellow;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+}
+
 #bg-img {
     background-position-x: -250px;
 }
