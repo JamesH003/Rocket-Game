@@ -248,15 +248,23 @@ body.incorrect {
     padding: 1em;
 }
 
+/* buttons at bottom of modals */
 #try-again, 
 #play-again {
     padding: 10px 15px;
     font-size: 100%;
-    margin-left: 53px;
     background-color: #00f7fe;
     text-transform: uppercase;
 }
 
+/* hover effect on modal buttons */
+#try-again:hover,
+#play-again:hover {
+    background-color: #0090fee6;
+    transform: scale(1.03);
+    color: #fff;
+    box-shadow: 0px 0px 10px aqua;
+}
 
 /* centers try-again & play-again buttons on modals */
 .modal-btn-align-div {
