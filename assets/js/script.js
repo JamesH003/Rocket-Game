@@ -6,6 +6,7 @@ let nextBtn = document.getElementById('next-btn');
 let questionCard = document.getElementById('question-card');
 let questionElement = document.getElementById('question');
 let answerButtons = document.getElementById('answer-buttons');
+let resetBtn = document.getElementById('reset-btn');
 
 // this creates two new variables which will default both to 'undefined'
 let randomQuestions, currentQuestion;
@@ -14,6 +15,9 @@ let randomQuestions, currentQuestion;
 let countdownTimer = 30;
 let timerId;
 let timer = document.getElementById('countdown-timer');
+resetBtn.addEventListener("click", function() {
+    window.location.reload();
+});
 
 // score counters
 let scoreIncremented = false;
