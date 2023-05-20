@@ -320,10 +320,12 @@ body.incorrect {
 }
 }
 
-        .timer-container {
-            left: 32%;
-        }
+@media screen and (min-width: 390px) {
+    /* raises the content on the homepage */
+    #homepage-header {
+        padding: 30px 60px 26px 60px;
     }
+}
 
     @media screen and (min-width: 750px) {
         .timer-container {
