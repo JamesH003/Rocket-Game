@@ -422,6 +422,18 @@ body.incorrect {
     .rocket {
         left: 250px;
     }
+
+    /* align position of fire with rocket */
+    #fire {
+        bottom: 60px;
+        left: 215px;
+    }
+
+    /* align position of explosion with rocket */
+    #explosion {
+        bottom: 60px;
+        left: 215px;
+    }
 }
 
 @media screen and (min-width: 950px) {
@@ -455,3 +467,20 @@ body.incorrect {
     #homepage-rocket {
         width: 17%;
     }
+
+    /* rocket positioning on quiz page */
+    .rocket {
+        bottom: 60px;
+        left: 22.4vw;
+    }
+
+    /* align position of explosion with rocket */
+    #explosion {
+        left: 240px;
+    }
+
+    /* align position of fire with rocket */
+    #fire {
+        left: 240px;
+    }
+}
