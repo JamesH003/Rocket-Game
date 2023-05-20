@@ -181,33 +181,67 @@ body.incorrect {
     display: none;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-.close-rules-modal,
-.close-congrats-modal,
-.close-fail-modal {
+#rules-modal {
+    margin: auto;
+    color: #00f7fe;
+    background: black;
+    box-shadow: 0 0 150px;
+    border-radius: 10px;
+    padding: 1em 1em 1em 1.5em;
+}
+
+#rules-modal h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 118%;
+    padding-bottom: 8px;
+}
+
+#rules-modal ul {
+    padding-left: 10px;
+}
+
+#rules-modal p {
+    text-align: center;
+    padding: 1em 1em 1em 0em;
+    font-size: 118%;
+}
+
+#congrats-modal {
+    box-shadow: 0 0 150px #0f0;
+    margin: auto;
+    color: #00f7fe;
+    background: black;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+#congrats-modal h1,
+#fail-modal h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 162%;
+    padding-bottom: 10px;
+}
+
+#congrats-modal p,
+#fail-modal p {
+    text-align: center;
+    font-size: 118%;
+    padding-bottom: 1em;
+}
+
+#fail-modal {
+    box-shadow: 0 0 150px #f00;
+    margin: auto;
+    color: #00f7fe;
+    background: black;
+    border-radius: 10px;
+    padding: 1em;
+}
+
     color: #aaa;
     float: right;
     font-size: 28px;
