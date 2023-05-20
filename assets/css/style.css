@@ -327,12 +327,19 @@ body.incorrect {
     }
 }
 
-    @media screen and (min-width: 750px) {
-        .timer-container {
-            display: flex;
-            justify-content: flex-end;
-            position: revert;
-        }
+@media screen and (min-width: 480px){
+    /* sizing and alignment of header */
+    #homepage-header {
+        padding: 30px 60px 26px 60px;
+        text-align: center;
+    }
+
+    /* reduces rocket size for sizing */
+    #homepage-rocket {
+        width: 46%;
+    }
+}
+
 
         .score-area {
             top: 2%;
