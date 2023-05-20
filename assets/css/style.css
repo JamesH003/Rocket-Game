@@ -395,7 +395,12 @@ body.incorrect {
     }
 }
 
-@media screen and (min-width: 950px) {}
+@media screen and (min-width: 950px) {
+   /* reduces rocket size for spacing */
+    #homepage-rocket {
+        width: 29%;
+    }
+}
 
 @media screen and (min-width: 1085px) {
     /* Rocket ship */
