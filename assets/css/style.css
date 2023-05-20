@@ -107,7 +107,11 @@ body.incorrect {
 .score-area {
     color: #53e9eb;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2em;
+    background-color: rgba(50, 50, 50, 0.75);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 100px;
 }
 
 /* main div */
