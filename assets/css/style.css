@@ -68,6 +68,12 @@ body {
     margin-top: 2.5em;
 }
 
+#begin-mission-link:hover {
+    box-shadow: 0 0 70px #00fffa;
+    transform: scale(1.05);
+    background-color: rgba(50, 50, 50, 1);
+}
+
 #bg-img {
     background-position-x: -250px;
 }
