@@ -35,6 +35,7 @@ body {
 #homepage-body {
     background: url(/assets/images/space-bg.jpg) no-repeat;
     background-size: cover;
+    justify-content: unset;
 }
 
 #homepage-rocket {
