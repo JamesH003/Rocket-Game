@@ -340,15 +340,39 @@ body.incorrect {
     }
 }
 
-
-        .score-area {
-            top: 2%;
-            left: 2%;
-            font-size: 1.3rem;
-            background-color: #00000000;
-           
-        }
+@media screen and (min-width: 750px) {
+    /* reduces sice of rocket to improve spacing */
+    #homepage-rocket {
+        width: 37%;
     }
+
+    #rules-modal h1 {
+        font-size: 200%;
+    }
+
+    #rules-modal ul {
+        font-size: 125%;
+        line-height: 1.75em;
+    }
+
+    #rules-modal p {
+        font-size: 200%;
+    }
+
+    #congrats-modal h1, #fail-modal h1 {
+        font-size: 250%;
+    }
+
+    #congrats-modal p, 
+    #fail-modal p {
+        font-size: 142%;
+    }
+
+    #try-again, 
+    #play-again {
+        margin-left: 17.5em;
+    }
+}
 
 @media screen and (min-width: 880px) {
     #bg-img {
