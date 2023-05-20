@@ -269,8 +269,10 @@ body.incorrect {
     cursor: pointer;
   }
 
-  /* Rocket ship */
-  .rocket {
+.modal::backdrop {
+    background-color: rgba(43, 0, 255, 0.30);
+  }
+
     height: 9rem;
     width: 7rem;
     bottom: 65px;
