@@ -242,6 +242,15 @@ body.incorrect {
     padding: 1em;
 }
 
+#try-again, 
+#play-again {
+    padding: 10px 15px;
+    font-size: 100%;
+    margin-left: 53px;
+    background-color: #00f7fe;
+    text-transform: uppercase;
+}
+
     color: #aaa;
     float: right;
     font-size: 28px;
