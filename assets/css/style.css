@@ -375,10 +375,20 @@ body.incorrect {
 }
 
 @media screen and (min-width: 880px) {
+    /* increases font-size of header */
+    #homepage-header {
+        font-size: 4.7em;
+    }
+
+    /* reduces size of rocket for spacing */
+    #homepage-rocket {
+        width: 32%;
+    }
+
     #bg-img {
         background-position-x: unset;
     }
-        
+
     /* Rocket ship */
     .rocket {
         left: 250px;
