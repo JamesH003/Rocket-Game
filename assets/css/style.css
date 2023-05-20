@@ -83,9 +83,18 @@ body.incorrect {
 }
 
 .timer-container {
-    background-color: #00000000;
+    background-color: rgba(50, 50, 50, 0.7);
+    text-shadow: 3px 3px #000;
     color: #53e9eb;
     font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 38px;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+}
+
 }
 
 .score-area {
