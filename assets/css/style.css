@@ -399,7 +399,7 @@ body.incorrect {
 
     #try-again, 
     #play-again {
-        margin-left: 17.5em;
+        /* margin-left: 17.5em; */
     }
 }
 
