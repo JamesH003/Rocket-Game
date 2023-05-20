@@ -407,10 +407,15 @@ body.incorrect {
     .rocket {
         left: 22.75vw;
     }
+
+@media screen and (min-width: 1200px) {
+    /* increases header size */
+    #homepage-header {
+        font-size: 6.7em;
+        text-shadow: 6px 6px #0030ff;
     }
     
-@media screen and (min-width: 1200px) {}
-
-.disable {
-    pointer-events: none;
+    /* reduces rocket size for spacing */
+    #homepage-rocket {
+        width: 17%;
     }
