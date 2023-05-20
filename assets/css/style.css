@@ -327,13 +327,7 @@ body.incorrect {
 
 /* -------------------------------------------------------------------- */
 /* media queries */
-@media screen and (min-width: 375px) {
-#try-again, 
-#play-again {
-    margin-left: 88px;
-}
-}
-
+/* min-width 390px */
 @media screen and (min-width: 390px) {
     /* raises the content on the homepage */
     #homepage-header {
@@ -341,6 +335,7 @@ body.incorrect {
     }
 }
 
+/* min-width 480px */
 @media screen and (min-width: 480px){
     /* sizing and alignment of header */
     #homepage-header {
@@ -369,6 +364,7 @@ body.incorrect {
     }
 }
 
+/* min-width 750px */
 @media screen and (min-width: 750px) {
     /* reduces sice of rocket to improve spacing */
     #homepage-rocket {
@@ -403,6 +399,7 @@ body.incorrect {
     }
 }
 
+/* min-width 880px */
 @media screen and (min-width: 880px) {
     /* increases font-size of header */
     #homepage-header {
@@ -436,6 +433,7 @@ body.incorrect {
     }
 }
 
+/* min-width 950px */
 @media screen and (min-width: 950px) {
    /* reduces rocket size for spacing */
     #homepage-rocket {
@@ -443,6 +441,7 @@ body.incorrect {
     }
 }
 
+/* min-width 1085px */
 @media screen and (min-width: 1085px) {
     /* Rocket ship */
     .rocket {
@@ -456,6 +455,7 @@ body.incorrect {
     }
 }
 
+/* min-width 1200px */
 @media screen and (min-width: 1200px) {
     /* increases header size */
     #homepage-header {
