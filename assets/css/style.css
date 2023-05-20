@@ -257,6 +257,12 @@ body.incorrect {
     text-transform: uppercase;
 }
 
+
+/* centers try-again & play-again buttons on modals */
+.modal-btn-align-div {
+    text-align: center;
+}
+
 /* The Close Button */
 #close-rules-btn {
     color: #aaa;
