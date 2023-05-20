@@ -1,7 +1,7 @@
 /* jshint esversion: 11 */
 
 let startBtn = document.getElementById('start-btn');
-
+let mainBox = document.getElementById('main-box');
 let nextBtn = document.getElementById('next-btn');
 let questionCard = document.getElementById('question-card');
 let questionElement = document.getElementById('question');
@@ -42,6 +42,10 @@ let bgImg = document.getElementById('bg-img');
 // This means that whenever we click on the 'Start' button, it will run the code in the startQuiz function.
 startBtn.addEventListener('click', startQuiz);
 nextBtn.addEventListener('click', () => {
+    mainBox.style.boxShadow = '0 0 10px 2px';
+    Array.from(answerButtons.children).forEach(button => {
+        button.classList.remove('disable');
+    });
     currentQuestion++;
     nextQuestion();
 });
@@ -204,8 +208,9 @@ function userAnswer(e) {
     let correct = selectedButton.dataset.correct;
     setStatus(document.body, correct, selectedButton);
     Array.from(answerButtons.children).forEach(button => {
-        setStatus(button, button.dataset.correct, selectedButton)
-    })
+        button.classList.add('disable');
+        setStatus(button, button.dataset.correct, selectedButton);
+    });
     if (randomQuestions.length > currentQuestion + 1) {
         // shows the 'Next' button after you answer a question
         nextBtn.classList.remove('hidden');
@@ -227,12 +232,14 @@ function setStatus(element, correct, selectedButton) {
 
         // only increment if it hasn't already been for this round
         if (!scoreIncremented && selectedButton.dataset.correct) {
+            mainBox.style.boxShadow = '0 0 50px 2px rgba(0, 255, 0, 1)';
             incrementCorrectScore();
         }
     } else {
         element.classList.add('incorrect');
         // only decrement if it hasn't already been for this round
         if (!scoreDecremented && selectedButton.dataset.correct == undefined) {
+            mainBox.style.boxShadow = '0 0 50px 2px rgba(255, 0, 0, 1)';
             incrementIncorrectScore();
         }
     }
