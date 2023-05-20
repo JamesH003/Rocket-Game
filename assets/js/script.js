@@ -39,7 +39,12 @@ let twinkle = document.getElementById('twinkle');
 let rulesBtn = document.getElementById("rules-button");
 
 // Get the <span> element that closes the modal
-let closeBtn = document.getElementsByClassName("close-rules-modal")[0];
+let closeRules = document.getElementById("close-rules-btn");
+// let closeCongrats = document.getElementById("close-congrats-btn");
+// let closeFail = document.getElementById("close-fail-btn");
+
+let tryAgain = document.getElementById('try-again');
+let playAgain = document.getElementById('play-again');
 
 // let nightScene = document.getElementsByClassName('background-img-night');
 // let dayScene = document.getElementsByClassName('background-img-day');
@@ -63,9 +68,26 @@ startBtn.addEventListener('click', countdown);
 rulesBtn.addEventListener('click', openRulesModal);
 
 // Runs the closeModal function when the X is clicked
-closeBtn.addEventListener('click', closeModal);
+closeRules.addEventListener('click', closeRulesModal);
+
+// https://blog.webdevsimplified.com/2023-04/html-dialog/
+rulesModal.addEventListener("click", e => {
+    const dialogDimensions = rulesModal.getBoundingClientRect()
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      rulesModal.close()
+    }
+  })
+// closeCongrats.addEventListener('click', closeCongratsModal);
+// closeFail.addEventListener('click', closeFailModal);
 
 // bgImg.addEventListener('load', timeOfDay);
+
+
 
 
 
@@ -127,7 +149,9 @@ function initiateSelfDestruct() {
         setTimeout(() => {
             timer.classList.add('hidden');
             fire.style.display = 'block';
-        }, 6000);  
+        setTimeout(() => {
+            failModal.showModal()
+        }, 9000);     
     // } else {
     //     timer.innerHTML = countdownTimer + ':00';
     //     countdownTimer--;
@@ -137,38 +161,42 @@ function initiateSelfDestruct() {
 // Rules modal
 // When the user clicks on the button, open the modal
 function openRulesModal() {
-    rulesModal.style.display = "block";
-
+    rulesModal.showModal();
 }
 
 // Congrats modal
 // When the user clicks on the button, open the modal
 function openCongratsModal() {
-    congratsModal.style.display = "block";
-
+    congratsModal.showModal()
 }
 
 // Fail modal
 // When the user clicks on the button, open the modal
 function openFailModal() {
-    failModal.style.display = "block";
+    failModal.showModal();
 
 }
 
 // When the user clicks on <span> (x), close the modal
-function closeModal() {
-    rulesModal.style.display = 'none';
-    congratsModal.style.display = 'none';
-    failModal.style.display = 'none';
+function closeRulesModal() {
+    rulesModal.close();
 }
+
+// function closeCongratsModal() {
+//     congratsModal.close();
+// }
+
+// function closeFailModal() {
+//     failModal.close();
+// }
 
 // When the user clicks anywhere outside of the modal, close it
 // ASK ABOUT THIS???????????---------------------------------------------------------<<<<<<
-window.onclick = function (event) {
-    if (event.target == modal) {
-        rulesModal.style.display = "none";
-    }
-}
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         rulesModal.style.display = "none";
+//     }
+// }
 
 
 
@@ -274,7 +302,8 @@ function incrementIncorrectScore() {
 function initiateLaunchSequence() {
         setTimeout(() => {
             twinkle.style.display = 'block'
-        }, 15000);       
+            congratsModal.showModal()
+            console.log('congrats modal')
     }
 }
 
