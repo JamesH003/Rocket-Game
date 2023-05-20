@@ -352,6 +352,21 @@ body.incorrect {
     #homepage-rocket {
         width: 46%;
     }
+
+   /* increase rules modal header size */
+    #rules-modal h1 {
+        font-size: 160%;
+    }
+
+    /* rules modal list font size */
+    #rules-modal ul {
+        font-size: 120%;
+    }
+
+    /* 'good luck' font size */
+    #rules-modal p {
+        font-size: 160%;
+    }
 }
 
 @media screen and (min-width: 750px) {
@@ -421,6 +436,13 @@ body.incorrect {
     .rocket {
         left: 22.75vw;
     }
+
+    /* rules modal header and spacing */
+    #rules-modal h1 {
+        font-size: 250%;
+        padding-bottom: 30px;
+    }
+}
 
 @media screen and (min-width: 1200px) {
     /* increases header size */
