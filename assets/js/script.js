@@ -311,3 +311,11 @@ function timeOfDay() {
 // function for time of day 
 
 // function to initiate launch sequence 
+// restart button
+tryAgain.addEventListener("click", function() {
+    window.location.reload();
+});
+
+playAgain.addEventListener("click", function() {
+    window.location.reload();
+});
