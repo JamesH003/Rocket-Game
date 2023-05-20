@@ -251,19 +251,20 @@ body.incorrect {
     text-transform: uppercase;
 }
 
+/* The Close Button */
+#close-rules-btn {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close-rules-modal:hover,
-.close-rules-modal:focus,
-.close-congrats-modal:hover,
-.close-congrats-modal:focus,
-.close-fail-modal:hover,
-  .close-fail-modal:focus {
-    color: black;
+    position: relative;
+    top: -19px;
+    right: -8px;
+}
+
+#close-rules-btn:hover,
+#close-rules-btn:focus {
+    color: #00f7fe;
     text-decoration: none;
     cursor: pointer;
   }
