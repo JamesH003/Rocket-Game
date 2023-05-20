@@ -64,6 +64,38 @@
         <span id="tminus" class="hidden">T-Minus<br></span>
         <span id="countdown-timer"></span>
     </span>
+
+    <dialog id="rules-modal" class="modal">
+        <span id="close-rules-btn">&times;</span>
+        <h1>Rocket Launch Rules</h1>
+             <ul>
+                <li>Aim of the game is to launch the rocket.</li>
+                <li>You need 5 correct answers in 30 seconds to initiate the launch sequence.</li>
+                <li>Once you click ‘Start’ the timer will begin.</li>
+                <li>3 incorrect answers will initiate the self destruct sequence.</li>
+            </ul>
+                <p>Good luck!!</p>
+    </dialog>
+    
+    <!-- congrats-modal -->
+    <dialog id="congrats-modal" class="modal">
+        <!-- <span class="close-congrats-btn">&times;</span> -->
+        <h1>Congratulations!</h1>
+        <p>You have successfully completed the mission and launched the rocket! <br>
+        Would you like to play again?</p>
+            
+        <button id="play-again">Play Again</button>
+    </dialog>
+    
+    <!-- fail-modal -->
+    <dialog id="fail-modal" class="modal">
+        <!-- <span class="close-fail-btn">&times;</span> -->
+        <h1>Mission Failed!</h1>
+        <p>You have failed to complete the mission which has initiated the self destruct function... <br>
+        Would you like to play again?</p>
+
+        <button id="try-again">Try Again</button>
+    </dialog>
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/d5aef57d52.js" crossorigin="anonymous"></script>
