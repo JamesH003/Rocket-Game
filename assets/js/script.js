@@ -15,6 +15,8 @@ let randomQuestions, currentQuestion;
 let countdownTimer = 30;
 let timerId;
 let timer = document.getElementById('countdown-timer');
+let timerContainer = document.getElementsByClassName('timer-container')[0];
+
 resetBtn.addEventListener("click", function() {
     window.location.reload();
 });
@@ -276,7 +278,9 @@ function initiateLaunchSequence() {
     }
 }
 
-// initiateLaunchSequence()
+    timer.style.fontSize = '2em';
+    timerContainer.style.backgroundColor = 'rgba(50, 50, 50, 0)';
+    timerContainer.style.margin = 'auto';
 
 // to get the current time of day
 // function getHours() {
