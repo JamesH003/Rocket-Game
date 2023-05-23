@@ -3,6 +3,7 @@
 let startBtn = document.getElementById('start-btn');
 let mainBox = document.getElementById('main-box');
 let nextBtn = document.getElementById('next-btn');
+let scoreArea = document.getElementById('score-area');
 let questionCard = document.getElementById('question-card');
 let questionElement = document.getElementById('question');
 let answerButtons = document.getElementById('answer-buttons');
@@ -121,7 +122,10 @@ function startQuiz() {
     // this removes the hidden class and allows the question container to be displayed
     questionCard.classList.remove('hidden');
 
+    scoreArea.classList.remove('hidden');
+
     nextQuestion();
+    
 }
 
 // countdown timer
