@@ -10,6 +10,11 @@
     margin: 0;
 }
 
+/* fixes bug with font awesome icons not displaying */
+* {
+    font-family: Space Mono, Lato;
+}
+
 /* base colors defined as variables */
 :root {
     --color-base: #346beb;
