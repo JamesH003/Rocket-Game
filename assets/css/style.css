@@ -504,6 +504,11 @@ body.incorrect {
 
 /* min-width 1085px */
 @media screen and (min-width: 1085px) {
+    /* homepage rocket size for spacing */
+    #homepage-rocket {
+        width: 26%;
+    }
+        
     /* Rocket ship */
     .rocket {
         left: 22.75vw;
