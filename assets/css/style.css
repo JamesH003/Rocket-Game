@@ -361,6 +361,13 @@ body.incorrect {
     0%  {transform: rotate(0deg);}
     100% {transform: rotate(30deg) scale(0.0001); bottom: 41em; left: 16em;}
 }
+
+#twinkle {
+    position: absolute;
+    bottom: 40.5em;
+    left: 15em;
+}
+
 /* prevents answer buttons being clicked once an answer has been selected */
 .disable {
     pointer-events: none;
@@ -467,6 +474,13 @@ body.incorrect {
         100% {transform: rotate(30deg) scale(0.0001); bottom: 42em; left: 31em;}
     }
     
+    /* twinkle gif */
+    #twinkle {
+        position: absolute;
+        bottom: 41.5em;
+        left: 30.5em;
+    }
+
     /* align position of fire with rocket */
     #fire {
         bottom: 60px;
