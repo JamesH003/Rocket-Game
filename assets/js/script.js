@@ -6,6 +6,7 @@ let nextBtn = document.getElementById('next-btn');
 let questionCard = document.getElementById('question-card');
 let questionElement = document.getElementById('question');
 let answerButtons = document.getElementById('answer-buttons');
+let tminus = document.getElementById('tminus');
 let resetBtn = document.getElementById('reset-btn');
 
 // this creates two new variables which will default both to 'undefined'
@@ -324,15 +325,21 @@ function initiateLaunchSequence() {
     }
 }
 
+function hideElements() {
+    rocket.style.animation = 'shake 0.5s infinite';
+    tminus.classList.remove('hidden');
     timer.style.fontSize = '2em';
     timerContainer.style.backgroundColor = 'rgba(50, 50, 50, 0)';
     timerContainer.style.margin = 'auto';
-
-// to get the current time of day
-// function getHours() {
-//     return
-// }
-
+    countdownTimer = 5;
+    timer.innerHTML = countdownTimer + ':00';
+    mainBox.classList.add('hidden');
+    scoreArea.classList.add('hidden');
+    setTimeout(() => {
+        tminus.classList.add('hidden');
+        timer.classList.add('hidden');
+    }, 6000);
+}
 
 let today = new Date();
 let hours = today.getHours();
@@ -346,32 +353,8 @@ function timeOfDay() {
     } else {
         bgImg.style.backgroundImage = "url('assets/images/bg-night.jpg')";
     }
-};
+}
 
-
-// function incrementScore() {
-//     let oldScore = parseInt(document.getElementById('score').innerText);
-//     document.getElementById('score').innerText = ++oldScore;
-// }
-
-
-// /**
-//  * Gets the current tally of incorrect answers from the DOM and increments it by 1
-//  */
-// function incrementWrongAnswer() {
-//     let oldScore = parseInt(document.getElementById('incorrect').innerText);
-//     document.getElementById('incorrect-score').innerText = ++oldScore;
-// }
-
-
-
-// function to keep score
-
-// function for 30 second timer 
-
-// function for time of day 
-
-// function to initiate launch sequence 
 // restart button
 tryAgain.addEventListener("click", function() {
     window.location.reload();
