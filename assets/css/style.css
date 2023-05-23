@@ -312,16 +312,18 @@ body.incorrect {
     color: #00f7fe;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
 .modal::backdrop {
     background-color: rgba(43, 0, 255, 0.30);
   }
 
+/* Rocket ship */
+.rocket {
     height: 9rem;
     width: 7rem;
-    bottom: 65px;
-    left: 18px;
+    bottom: 55px;
+    left: 0;
     position: absolute;
     animation: rocket-launch;
     
