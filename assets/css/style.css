@@ -37,6 +37,26 @@ body {
     background-position: bottom left;
 }
 
+.icon {
+    font-size: 150%;
+    color: #00f7fe;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.volume-control {
+    font-size: 150%;
+    color: #00f7fe;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+}
+
+#volume-off-div {
+    display: none;
+}
+
 #homepage-body {
     background: url(/assets/images/space-bg.jpg) no-repeat;
     background-size: cover;
