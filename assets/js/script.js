@@ -308,6 +308,7 @@ function incrementCorrectScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore;
     scoreIncremented = true;
+    initiateLaunchSequence();
 }
 
 // increment the number of incorrect scores
@@ -315,17 +316,29 @@ function incrementIncorrectScore() {
     let oldScore = parseInt(document.getElementById('incorrect-score').innerText);
     document.getElementById('incorrect-score').innerText = ++oldScore;
     scoreDecremented = true;
+    initiateLaunchSequence();
 }
 
 function initiateLaunchSequence() {
+    if (correctScore >= 5) {
+        hideElements();
+        rocket.style.animation = 'shake 0.5s infinite, rocket-launch 10s forwards 6s';
         setTimeout(() => {
             playLaunchAudio();
         }, 6000);
         setTimeout(() => {
+            twinkle.style.display = 'block';
+        }, 15000);  
+        setTimeout(() => {
             playTwinkleAudio();
         }, 14500);  
+        setTimeout(() => {
             congratsModal.showModal()
             console.log('congrats modal')
+        }, 16000);     
+    } else if (incorrectScore >= 3) {
+        hideElements();
+        initiateSelfDestruct();
     }
 }
 
