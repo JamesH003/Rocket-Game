@@ -155,9 +155,8 @@ function initiateSelfDestruct() {
     // if (countdownTimer <= 0) {
         setTimeout(() => {
             clearInterval(timerId);
-        rocket.style.display = 'none';
-        explosion.style.display = 'block';
-        setTimeout(() => {
+            rocket.style.display = 'none';
+            explosion.style.display = 'block';
             timer.classList.add('hidden');
             fire.style.display = 'block';
         }, 6000);
