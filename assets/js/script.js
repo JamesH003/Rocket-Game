@@ -87,9 +87,15 @@ rulesModal.addEventListener("click", e => {
 
 // bgImg.addEventListener('load', timeOfDay);
 
+let launchAudio = document.getElementById('launch-audio');
+let twinkleAudio = document.getElementById('twinkle-audio');
+let explosionAudio = document.getElementById('explosion-audio');
+let fireAudio = document.getElementById('fire-audio');
+let muteAudio = document.getElementById('volume-off-div');
+let unmuteAudio = document.getElementById('volume-on-div');
 
-
-
+muteAudio.addEventListener('click', enableMute);
+unmuteAudio.addEventListener('click', disableMute);
 
 
 // -----------------------------------------FUNCTIONS---------------------------------------------------------------
@@ -149,6 +155,13 @@ function initiateSelfDestruct() {
         setTimeout(() => {
             timer.classList.add('hidden');
             fire.style.display = 'block';
+        }, 6000);
+        setTimeout(() => {
+            playExplosionAudio()
+        }, 5705);  
+        setTimeout(() => {
+            playFireAudio()
+        }, 7500);  
         setTimeout(() => {
             failModal.showModal()
         }, 9000);     
@@ -301,7 +314,11 @@ function incrementIncorrectScore() {
 
 function initiateLaunchSequence() {
         setTimeout(() => {
-            twinkle.style.display = 'block'
+            playLaunchAudio();
+        }, 6000);
+        setTimeout(() => {
+            playTwinkleAudio();
+        }, 14500);  
             congratsModal.showModal()
             console.log('congrats modal')
     }
@@ -363,3 +380,42 @@ tryAgain.addEventListener("click", function() {
 playAgain.addEventListener("click", function() {
     window.location.reload();
 });
+
+// audio
+function playLaunchAudio() {
+    launchAudio.play();
+  }
+
+  function playTwinkleAudio() {
+    twinkleAudio.play();
+  }
+
+  function playExplosionAudio() {
+    explosionAudio.play();
+  }
+
+  function playFireAudio() {
+    fireAudio.play();
+  }
+  
+  function pauseAudio() {
+    launchAudio.pause();
+  }
+
+  function enableMute() {
+    launchAudio.muted = true;
+    twinkleAudio.muted = true;
+    explosionAudio.muted = true;
+    fireAudio.muted = true;
+    unmuteAudio.style.display = 'block';
+    muteAudio.style.display = 'none';
+  }
+
+  function disableMute() {
+    launchAudio.muted = false;
+    twinkleAudio.muted = false;
+    explosionAudio.muted = false;
+    fireAudio.muted = false;
+    unmuteAudio.style.display = 'none';
+    muteAudio.style.display = 'block';
+  }
