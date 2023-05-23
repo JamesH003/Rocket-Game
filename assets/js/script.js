@@ -24,6 +24,8 @@ resetBtn.addEventListener("click", function() {
 });
 
 // score counters
+let correctScore = 0;
+let incorrectScore = 0;
 let scoreIncremented = false;
 let scoreDecremented = false;
 
@@ -304,16 +306,16 @@ function removeStatus(element) {
 
 // increment the number of correct scores
 function incrementCorrectScore() {
-    let oldScore = parseInt(document.getElementById('score').innerText);
-    document.getElementById('score').innerText = ++oldScore;
+    correctScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++correctScore;
     scoreIncremented = true;
     initiateLaunchSequence();
 }
 
 // increment the number of incorrect scores
 function incrementIncorrectScore() {
-    let oldScore = parseInt(document.getElementById('incorrect-score').innerText);
-    document.getElementById('incorrect-score').innerText = ++oldScore;
+    incorrectScore = parseInt(document.getElementById('incorrect-score').innerText);
+    document.getElementById('incorrect-score').innerText = ++incorrectScore;
     scoreDecremented = true;
     initiateLaunchSequence();
 }
