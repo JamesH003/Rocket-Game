@@ -357,6 +357,10 @@ body.incorrect {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
+@keyframes rocket-launch {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(30deg) scale(0.0001); bottom: 41em; left: 16em;}
+}
 /* prevents answer buttons being clicked once an answer has been selected */
 .disable {
     pointer-events: none;
@@ -457,6 +461,12 @@ body.incorrect {
         left: 250px;
     }
 
+    /* rocket launch animation */
+    @keyframes rocket-launch {
+        0%  {transform: rotate(0deg);}
+        100% {transform: rotate(30deg) scale(0.0001); bottom: 42em; left: 31em;}
+    }
+    
     /* align position of fire with rocket */
     #fire {
         bottom: 60px;
