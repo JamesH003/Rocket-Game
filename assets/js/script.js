@@ -201,24 +201,6 @@ function closeRulesModal() {
     rulesModal.close();
 }
 
-// function closeCongratsModal() {
-//     congratsModal.close();
-// }
-
-// function closeFailModal() {
-//     failModal.close();
-// }
-
-// When the user clicks anywhere outside of the modal, close it
-// ASK ABOUT THIS???????????---------------------------------------------------------<<<<<<
-// window.onclick = function (event) {
-//     if (event.target == modal) {
-//         rulesModal.style.display = "none";
-//     }
-// }
-
-
-
 
 // This is going to set the next question when the 'Next' button is clicked
 function nextQuestion() {
@@ -228,8 +210,6 @@ function nextQuestion() {
     displayQuestion(randomQuestions[currentQuestion]);
 }
 
-
-// ???????????????? question.question
 // assigns buttons to the various answers for the user to choose from?
 function displayQuestion(question) {
     questionElement.innerText = question.question;

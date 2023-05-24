@@ -5,7 +5,6 @@
 *::before,
 ::after {
     box-sizing: border-box;
-    font-family: Space Mono, Lato;
     padding: 0;
     margin: 0;
 }
@@ -17,14 +16,10 @@
 
 /* base colors defined as variables */
 :root {
-    --color-base: #346beb;
     --color-btn: #5C88EF;
     --color-incorrect-ans: #d41111;
     --color-correct-ans: #1fc461;
 }
-
-
-
 
 body {
     display: flex;
@@ -58,7 +53,7 @@ body {
 }
 
 #homepage-body {
-    background: url(/assets/images/space-bg.jpg) no-repeat;
+    background: url(../images/space-bg.jpg) no-repeat;
     background-size: cover;
     justify-content: unset;
 }
@@ -124,15 +119,6 @@ body.incorrect {
     margin-bottom: 38px;
     border-radius: 10px;
     padding: 0 10px 0 10px;
-}
-
-#reset-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    height: 20px;
-    width: 20px;
-    color: #00f7fe;
 }
 
 .score-area {
@@ -439,11 +425,6 @@ body.incorrect {
     #congrats-modal p, 
     #fail-modal p {
         font-size: 142%;
-    }
-
-    #try-again, 
-    #play-again {
-        /* margin-left: 17.5em; */
     }
 }
 
