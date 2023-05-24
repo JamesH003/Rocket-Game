@@ -235,23 +235,89 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Existing Features
 
-- **Title for feature #1**
+- **Landing page**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The landing page features a striking background image of a colourful nebula, with an image of a rocket in the foreground. The title and name of the quiz game is displayed in light blue with a text shadow and large font to emphasise the text. There is a 'Begin Mission' at the bottom of the page with a box shadow, giving the button an emphatic glow. The rocket features a 'shake' animation, giving it the impression of being about to launch.
 
-![screenshot](documentation/feature01.png)
+        ![screenshot](documentation/landing-features.png)
 
-- **Title for feature #2**
+- **Control buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - On first loading quiz.html, there are two prominent buttons in the center of the screen. These are the main control buttons, one for displaying the rules modal to the user and the other to commence the quiz game. Both buttons consist of white text with a blue background. They are clear, defined and intuitive in terms of functionality. 
 
-![screenshot](documentation/feature02.png)
+        ![screenshot](documentation/control-btns-features.png)
 
-- **Title for feature #3**
+- **Secondary control buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - In the top right corner there are three secondary control buttons for site controls. The first is a navigation link to return to the landing page, utilising a house icon from Font Awesome. The second is an unmute button for sound effects in the game, utilising a speaker icon from Font Awesome. The third is a reset button to reload the page should the user wish to restart the game, utilising a curved arrows icon from Font Awesome. The icons greatly add to the user experience as they grant the user more control over their experience. The volume control element is intuitive in that is displays the current status in terms of muted or unmuted. Once clicked it will change to the opposite state.
 
-![screenshot](documentation/feature03.png)
+        ![screenshot](documentation/secondary-btns-features.png)
+
+- **Background image**
+
+    - The background image on the quiz page is responsive to the time of day of the user. Depending on the time of day of where the user is, the background image will either feature a day scene or night scene. Between the hours of 7am and 6pm, the background image will feature a day scene of a launch pad by the coast with a bright blue sky. Between the hours of 6pm and 7am, the background image will feature a night scene of a launch pad by the coast with a dark night sky.
+
+        ![screenshot](documentation/bg-image-day-features.png) 
+        ![screenshot](documentation/bg-image-night-features.png)
+
+- **Rules modal**
+
+    - Upon clicking the 'Rules' button, a modal is opened. This conveys the instuctions and rules of the game to the user. The modal consists of light blue text on a contrasting black background. There is also a box shadow effect around the modal consistent with the neon space theme throughout.
+
+        ![screenshot](documentation/rules-modal.png)
+
+- **Quiz game layout**
+
+    - The quiz page consists of clearly defined and intuitive sections for the user. At the top is the score board, which tracks the number of correct and incorrect answers. The box in the center of the page features the question being asked and four answer buttons. At the bottom there is a 30 second timer which begins once the 'Start' button is pressed. 
+
+        ![screenshot](documentation/quiz-layout-features.png)
+
+- **Correct and Incorrect features**
+
+    - When the user selects an answer button, the button itself will turn green or red depending on whether the selected answer was correct or incorrect. The box shadow effect around the question card will also increase in size and change to either green or red. This enhances the user experience as there is no ambiguity and also a pleasing visual experience.
+
+        ![screenshot](documentation/correct-features.png)
+        ![screenshot](documentation/incorrect-features.png)
+
+- **T-minus countdown**
+
+     - Upon reaching either 5 correct answers or 3 incorrect answers the screen will automatically clear and a 5 second countdown timer will appear. This is the countdown to either the launch sequence or the self-destruct sequence. The 'T-minus' element is another feature consistent with rocketry and space travel.
+
+        ![screenshot](documentation/tminus-features.png)
+        
+
+- **Launch sequence**
+
+    - Once 5 correct answers has been achieved with the 30 second timeframe, the launch sequence will be initiated. This consists of the rocket launching and flying up towards the top of the screen and disappearing into the distance. The user has the option of unmuting the sound and will hear a sound effect of a rocket launching. This is the successful culmination of the game and will give the user a feeling of satisfaction. 
+
+        ![screenshot](documentation/launch-features.png)
+        
+
+- **Twinkle feature**
+
+    - As the rocket disappears into the distance a twinkle feature appears to represent the rocket disappearing into deep space. The user has the option of unmuting the sound and will hear a satisying ding sound as the twinkle appears.
+
+        ![screenshot](documentation/twinkle-features.png)
+
+- **Congratulations modal**
+
+    - Upon succesful launching of the rocket a modal appears at the end. This conveys a message congratulating the user and offering them the chance to play again. The styling of the modal is consistent with the rest of the game and features a neon space theme and a successful green glow in the form of a box shadow.
+
+        ![screenshot](documentation/congrats-modal-features.png)
+
+- **Self Destruct sequence**
+
+    - Once 3 incorrect answers have been registered the self destruct sequence will be triggered. This features an explosion gif and subsequent fire gif. The user has the option of unmuting the sound and will hear an explosion sound effect followed by a fire sound effect. The dramatic explosion and fire features add a degree of jeopardy and increases the sense of challenge and excitment to the user.
+
+        ![screenshot](documentation/self-destruct-features.png)
+
+- **Fail modal**
+
+    - Upon completion of the self-destruct sequence a modal appears at the end. This conveys a message stating the the user has failed the mission and offers them the chance to try again. The styling of the modal is consistent with the rest of the game and features a neon space theme and a red glow in the form of a box shadow synonymous with failure.
+
+        ![screenshot](documentation/fail-features.png)
+
+
 
 <!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
