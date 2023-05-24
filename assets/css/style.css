@@ -66,6 +66,14 @@ body {
     justify-content: unset;
 }
 
+#homepage-body.#home-volume-div {
+    font-size: 150%;
+    color: #00f7fe;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 #homepage-rocket {
     width: 59%;
     animation: shake 0.75s infinite;
