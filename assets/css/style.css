@@ -52,6 +52,14 @@ body {
     display: none;
 }
 
+.home-icon {
+    font-size: 150%;
+    color: #00f7fe;
+    position: absolute;
+    top: 20px;
+    right: 108px;
+}
+
 #homepage-body {
     background: url(../images/space-bg.jpg) no-repeat;
     background-size: cover;
