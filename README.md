@@ -112,27 +112,17 @@ In this section, list all of your user stories for the project.
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to understand the purpose of the site, so that I can decide if I want to use it.
+- As a new site user, I would like to understand the aim of the game, so that I can maximise my chances .
+- As a new site user, I would like to see strong enticing visuals, so that I can enjoy the experience.
+- As a new site user, I would like to readily understand the layout of the game/quiz, so that I don't waste time figuring it out.
+- As a new site user, I would like to be able to control any sound, so that I can tailor my experience to my needs.
+- As a new site user, I would like there to be an element of jeopardy to the game, to increase my gaming experience.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-
-### Site Admin
-
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a returning site user, I would like to have a random selection of quesions, so that I can attempt the game multiple times.
+- As a returning site user, I would like to be able to see my previous scores, so that I can attempt to improve on them.
 
 ## Wireframes
 
@@ -151,26 +141,43 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
+| Mobile | ![screenshot](documentation/wireframes/landing-mobile-wireframe.png) |
+| Desktop | ![screenshot](documentation/wireframes/landing-desktop-wireframe.png) |
 
-### About Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
-
-### Contact Page Wireframes
+### Rules Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
+| Mobile | ![screenshot](documentation/wireframes/rules-mobile-wireframe.png) |
+| Desktop | ![screenshot](documentation/wireframes/rules-desktop-wireframe.png) |
 
+### Quiz Page Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/quiz-mobile-wireframe.png) |
+| Desktop | ![screenshot](documentation/wireframes/quiz-desktop-wireframe.png) |
+
+### Launch Page Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/launch-mobile-wireframe.png) |
+| Desktop | ![screenshot](documentation/wireframes/launch-desktop-wireframe.png) |
+
+### Self Destruct Page Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/destruct-mobile-wireframe.png) |
+| Desktop | ![screenshot](documentation/wireframes/destruct-desktop-wireframe.png) |
+
+### Play Again Page Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/replay-mobile-wireframe.png) |
+| Desktop | ![screenshot](documentation/wireframes/replay-desktop-wireframe.png) |
 <!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Repeat for any addition wireframe pages you have.
