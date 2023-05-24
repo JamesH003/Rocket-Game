@@ -134,50 +134,82 @@ Instructions on how to do Markdown `tables` start on line #213 on this site: htt
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+To follow best practice, wireframes were developed for mobile and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 ### Home Page Wireframes
+
+<details>
+<summary>Click to see the Home Page Wireframes</summary>
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/landing-mobile-wireframe.png) |
 | Desktop | ![screenshot](documentation/wireframes/landing-desktop-wireframe.png) |
 
+</details>
+
 ### Rules Page Wireframes
+
+<details>
+<summary>Click to see the Rules Page Wireframes</summary>
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/rules-mobile-wireframe.png) |
 | Desktop | ![screenshot](documentation/wireframes/rules-desktop-wireframe.png) |
 
+</details>
+
 ### Quiz Page Wireframes
+
+<details>
+<summary>Click to see the Quiz Page Wireframes</summary>
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/quiz-mobile-wireframe.png) |
 | Desktop | ![screenshot](documentation/wireframes/quiz-desktop-wireframe.png) |
 
+</details>
+
 ### Launch Page Wireframes
+
+<details>
+<summary>Click to see the Launch Page Wireframes</summary>
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/launch-mobile-wireframe.png) |
 | Desktop | ![screenshot](documentation/wireframes/launch-desktop-wireframe.png) |
 
+</details>
+
 ### Self Destruct Page Wireframes
+
+<details>
+<summary>Click to see the Self Destruct Page Wireframes</summary>
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/destruct-mobile-wireframe.png) |
 | Desktop | ![screenshot](documentation/wireframes/destruct-desktop-wireframe.png) |
 
+</details>
+
 ### Play Again Page Wireframes
+
+<details>
+<summary>Click to see the Play Again Page Wireframes</summary>
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/replay-mobile-wireframe.png) |
 | Desktop | ![screenshot](documentation/wireframes/replay-desktop-wireframe.png) |
+
+</details>
+
+
 <!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Repeat for any addition wireframe pages you have.
