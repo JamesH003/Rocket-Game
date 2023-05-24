@@ -9,12 +9,12 @@
     margin: 0;
 }
 
-/* fixes bug with font awesome icons not displaying */
+/* Fixes bug with font awesome icons not displaying */
 * {
     font-family: Space Mono, Lato;
 }
 
-/* base colors defined as variables */
+/* Base colors defined as variables */
 :root {
     --color-btn: #5C88EF;
     --color-incorrect-ans: #d41111;
@@ -32,6 +32,7 @@ body {
     background-position: bottom left;
 }
 
+/* Reset icon */
 .icon {
     font-size: 150%;
     color: #00f7fe;
@@ -40,6 +41,7 @@ body {
     right: 20px;
 }
 
+/* Mute & unmute buttons */
 .volume-control {
     font-size: 150%;
     color: #00f7fe;
@@ -48,10 +50,12 @@ body {
     right: 60px;
 }
 
+/* Initially hides unmute button */
 #volume-off-div {
     display: none;
 }
 
+/* Home icon - link to homepage */
 .home-icon {
     font-size: 150%;
     color: #00f7fe;
@@ -60,25 +64,21 @@ body {
     right: 108px;
 }
 
+/* index.html */
+/* Landing page */
 #homepage-body {
     background: url(../images/space-bg.jpg) no-repeat;
     background-size: cover;
     justify-content: unset;
 }
 
-#homepage-body.#home-volume-div {
-    font-size: 150%;
-    color: #00f7fe;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
+/* Rocket on landing page */
 #homepage-rocket {
     width: 59%;
     animation: shake 0.75s infinite;
 }
 
+/* Header on landing page */
 #homepage-header {
     font-size: 4.2em;
     color: #00fffa;
@@ -88,7 +88,8 @@ body {
     display: flex;
     padding: 60px 60px 26px 60px;
 }
-    
+ 
+/* Begin mission button on landing page */
 #begin-mission-link {
     font-size: 1.1em;
     color: #00fffa;
@@ -104,26 +105,30 @@ body {
     margin-top: 2.5em;
 }
 
+/* Hover on begin mission button */
 #begin-mission-link:hover {
     box-shadow: 0 0 70px #00fffa;
     transform: scale(1.05);
     background-color: rgba(50, 50, 50, 1);
 }
 
+/* quiz.html */
+/* Positioning of bg image on quiz page */
 #bg-img {
     background-position-x: -250px;
 }
 
-/* green color for correct answers */
+/* Green color for correct answers */
 body.correct {
     background-color: var(--color-correct-ans);
 }
 
-/* red color for incorrect answers */
+/* Red color for incorrect answers */
 body.incorrect {
     background-color: var(--color-incorrect-ans);
 }
 
+/* Timer container */
 .timer-container {
     background-color: rgba(50, 50, 50, 0.7);
     text-shadow: 3px 3px #000;
@@ -137,6 +142,7 @@ body.incorrect {
     padding: 0 10px 0 10px;
 }
 
+/* Score board */
 .score-area {
     color: #53e9eb;
     text-align: center;
@@ -147,7 +153,7 @@ body.incorrect {
     box-shadow: 0 0 100px;
 }
 
-/* main div */
+/* Main div */
 .main-div {
     position: absolute;
     width: 800px;
@@ -160,11 +166,12 @@ body.incorrect {
     box-shadow: 0 0 10px 2px;
 }
 
+/* Question display */
 #question-card {
     text-align: center;
 }
 
-/* answer buttons */
+/* Answer buttons */
 .buttons-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -172,7 +179,7 @@ body.incorrect {
     margin: 20px 0;
 }
 
-/* all buttons */
+/* All quiz buttons */
 .btn {
     background-color: var(--color-btn);
     border: 1px solid;
@@ -181,20 +188,23 @@ body.incorrect {
     color: #fff;
 }
 
-/* hover effect over buttons */
+/* Hover effect over buttons */
 .btn:hover {
     border-color: #000;
 }
 
+/* Correct answer effect on button */
 .btn.correct {
     background-color: var(--color-correct-ans);
     color: #000;
 }
 
+/* Incorrect answer effect on button */
 .btn.incorrect {
     background-color: var(--color-incorrect-ans);
 }
 
+/* Control buttons */
 .start-btn,
 .next.btn,
 .rules-btn {
@@ -204,16 +214,19 @@ body.incorrect {
     margin: 3px;
 }
 
+/* Control buttons flexbox */
 .control-btns {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Hides elements when needed */
 .hidden {
     display: none;
 }
 
+/* Rules modal */
 #rules-modal {
     margin: auto;
     color: #00f7fe;
@@ -223,6 +236,7 @@ body.incorrect {
     padding: 1em 1em 1em 1.5em;
 }
 
+/* Rules modal header */
 #rules-modal h1 {
     text-align: center;
     text-transform: uppercase;
@@ -231,16 +245,19 @@ body.incorrect {
     padding-bottom: 8px;
 }
 
+/* Rules modal bullet point list */
 #rules-modal ul {
     padding-left: 10px;
 }
 
+/* Rules modal - good luck */
 #rules-modal p {
     text-align: center;
     padding: 1em 1em 1em 0em;
     font-size: 118%;
 }
 
+/* Congrats modal */
 #congrats-modal {
     box-shadow: 0 0 150px #0f0;
     margin: auto;
@@ -250,6 +267,7 @@ body.incorrect {
     padding: 1em;
 }
 
+/* Congrats and Fail modals header */
 #congrats-modal h1,
 #fail-modal h1 {
     text-align: center;
@@ -259,6 +277,7 @@ body.incorrect {
     padding-bottom: 10px;
 }
 
+/* Congrats and Fail modals text */
 #congrats-modal p,
 #fail-modal p {
     text-align: center;
@@ -266,6 +285,7 @@ body.incorrect {
     padding-bottom: 1em;
 }
 
+/* Fail modal */
 #fail-modal {
     box-shadow: 0 0 150px #f00;
     margin: auto;
@@ -275,7 +295,7 @@ body.incorrect {
     padding: 1em;
 }
 
-/* buttons at bottom of modals */
+/* Buttons at bottom of modals */
 #try-again, 
 #play-again {
     padding: 10px 15px;
@@ -284,7 +304,7 @@ body.incorrect {
     text-transform: uppercase;
 }
 
-/* hover effect on modal buttons */
+/* Hover effect on modal buttons */
 #try-again:hover,
 #play-again:hover {
     background-color: #0090fee6;
@@ -293,12 +313,12 @@ body.incorrect {
     box-shadow: 0px 0px 10px aqua;
 }
 
-/* centers try-again & play-again buttons on modals */
+/* Centers try-again & play-again buttons on modals */
 .modal-btn-align-div {
     text-align: center;
 }
 
-/* The Close Button */
+/* Rules modal close Button */
 #close-rules-btn {
     color: #aaa;
     float: right;
@@ -309,6 +329,7 @@ body.incorrect {
     right: -8px;
 }
 
+/* Hover effect on rules modal close button */
 #close-rules-btn:hover,
 #close-rules-btn:focus {
     color: #00f7fe;
@@ -316,6 +337,7 @@ body.incorrect {
     cursor: pointer;
 }
 
+/* Backdrop around modals */
 .modal::backdrop {
     background-color: rgba(43, 0, 255, 0.30);
   }
@@ -328,15 +350,16 @@ body.incorrect {
     left: 0;
     position: absolute;
     transition: all 0.5s ease-in-out;
-    /* animation: shake 0.5s infinite, rocket-launch 10s infinite 2s; */
 }
 
+/* Positioning of explosion */
 #explosion {
     bottom: 20px;
     left: -20px;
     position: absolute;
 }
 
+/* Positioning of fire */
 #fire {
     bottom: 48px;
     left: -20px;
@@ -344,6 +367,7 @@ body.incorrect {
     position: absolute;
 }
 
+/* Shake animation on rocket */
 /* https://www.w3schools.com/howto/howto_css_shake_image.asp */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -359,25 +383,26 @@ body.incorrect {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
+/* Rocket launch animation */
 @keyframes rocket-launch {
     0%  {transform: rotate(0deg);}
     100% {transform: rotate(30deg) scale(0.0001); bottom: 41em; left: 16em;}
 }
 
+/* Positioning of twinkle */
 #twinkle {
     position: absolute;
     bottom: 40.5em;
     left: 15em;
 }
 
-/* prevents answer buttons being clicked once an answer has been selected */
+/* Prevents answer buttons being clicked once an answer has been selected */
 .disable {
     pointer-events: none;
 }
 
-/* -------------------------------------------------------------------- */
-/* media queries */
-/* min-width 390px */
+/* Media queries */
+/* Min-width 390px */
 @media screen and (min-width: 390px) {
     /* raises the content on the homepage */
     #homepage-header {
@@ -385,77 +410,83 @@ body.incorrect {
     }
 }
 
-/* min-width 480px */
+/* Min-width 480px */
 @media screen and (min-width: 480px){
-    /* sizing and alignment of header */
+    /* Sizing and alignment of header */
     #homepage-header {
         padding: 30px 60px 26px 60px;
         text-align: center;
     }
 
-    /* reduces rocket size for sizing */
+    /* Reduces rocket size for sizing */
     #homepage-rocket {
         width: 46%;
     }
 
-   /* increase rules modal header size */
+   /* Increase rules modal header size */
     #rules-modal h1 {
         font-size: 160%;
     }
 
-    /* rules modal list font size */
+    /* Rules modal list font size */
     #rules-modal ul {
         font-size: 120%;
     }
 
-    /* 'good luck' font size */
+    /* 'Good Luck' font size */
     #rules-modal p {
         font-size: 160%;
     }
 }
 
-/* min-width 750px */
+/* Min-width 750px */
 @media screen and (min-width: 750px) {
-    /* reduces sice of rocket to improve spacing */
+    /* Reduces sice of rocket to improve spacing */
     #homepage-rocket {
         width: 37%;
     }
 
+    /* Rules modal header */
     #rules-modal h1 {
         font-size: 200%;
     }
 
+    /* Rules modal bullet point list */
     #rules-modal ul {
         font-size: 125%;
         line-height: 1.75em;
     }
 
+    /* Rules modal good luck */
     #rules-modal p {
         font-size: 200%;
     }
 
+    /* Congrats and Fail modal header font-size */
     #congrats-modal h1, #fail-modal h1 {
         font-size: 250%;
     }
 
+    /* Congrats and Fail modal text font-size */
     #congrats-modal p, 
     #fail-modal p {
         font-size: 142%;
     }
 }
 
-/* min-width 880px */
+/* Min-width 880px */
 @media screen and (min-width: 880px) {
-    /* increases font-size of header */
+    /* Increases font-size of header */
     #homepage-header {
         font-size: 4.7em;
     }
 
-    /* reduces size of rocket for spacing */
+    /* Reduces size of rocket for spacing */
     #homepage-rocket {
         width: 32%;
     }
 
+    /* Repositions area of focus on background image */
     #bg-img {
         background-position-x: unset;
     }
@@ -465,43 +496,43 @@ body.incorrect {
         left: 250px;
     }
 
-    /* rocket launch animation */
+    /* Rocket launch animation */
     @keyframes rocket-launch {
         0%  {transform: rotate(0deg);}
         100% {transform: rotate(30deg) scale(0.0001); bottom: 42em; left: 31em;}
     }
     
-    /* twinkle gif */
+    /* Twinkle gif */
     #twinkle {
         position: absolute;
         bottom: 41.5em;
         left: 30.5em;
     }
 
-    /* align position of fire with rocket */
+    /* Align position of fire with rocket */
     #fire {
         bottom: 60px;
         left: 215px;
     }
 
-    /* align position of explosion with rocket */
+    /* Align position of explosion with rocket */
     #explosion {
         bottom: 60px;
         left: 215px;
     }
 }
 
-/* min-width 950px */
+/* Min-width 950px */
 @media screen and (min-width: 950px) {
-   /* reduces rocket size for spacing */
+   /* Reduces rocket size for spacing */
     #homepage-rocket {
         width: 29%;
     }
 }
 
-/* min-width 1085px */
+/* Min-width 1085px */
 @media screen and (min-width: 1085px) {
-    /* homepage rocket size for spacing */
+    /* Homepage rocket size for spacing */
     #homepage-rocket {
         width: 26%;
     }
@@ -511,38 +542,38 @@ body.incorrect {
         left: 22.75vw;
     }
 
-    /* rules modal header and spacing */
+    /* Rules modal header and spacing */
     #rules-modal h1 {
         font-size: 250%;
         padding-bottom: 30px;
     }
 }
 
-/* min-width 1200px */
+/* Min-width 1200px */
 @media screen and (min-width: 1200px) {
-    /* increases header size */
+    /* Increases header size */
     #homepage-header {
         font-size: 6.7em;
         text-shadow: 6px 6px #0030ff;
     }
     
-    /* reduces rocket size for spacing */
+    /* Reduces rocket size for spacing */
     #homepage-rocket {
         width: 17%;
     }
 
-    /* rocket positioning on quiz page */
+    /* Rocket positioning on quiz page */
     .rocket {
         bottom: 60px;
         left: 22.4vw;
     }
 
-    /* align position of explosion with rocket */
+    /* Align position of explosion with rocket */
     #explosion {
         left: 240px;
     }
 
-    /* align position of fire with rocket */
+    /* Align position of fire with rocket */
     #fire {
         left: 240px;
     }
