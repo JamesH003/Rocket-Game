@@ -9,7 +9,7 @@
     margin: 0;
 }
 
-/* Fixes bug with font awesome icons not displaying */
+/* Fixes bug with font awesome icons not displaying on quiz.html */
 * {
     font-family: Space Mono, Lato;
 }
@@ -21,6 +21,7 @@
     --color-correct-ans: #1fc461;
 }
 
+/* Body into flexbox and bg img positioning */
 body {
     display: flex;
     flex-direction: column;

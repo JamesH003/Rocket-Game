@@ -7,43 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rocket Launch is a rocket based quix game where players answer questions against a timer in order to launch the rocket">
     <meta name="keywords" content="quiz game rocket launch questions">
+    <!-- https://www.pngegg.com/en/png-pxrkd/download -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rocket Launch</title>
 </head>
 
 <body id="bg-img">
-    <!-- <img src="assets/images/pexels-spacex-23764.jpg" alt="starry sky during rocket launch"> -->
-
-     <!-- score area -->
+     <!-- Score area -->
      <div id="score-area" class="score-area hidden">
         <p class="scores">Correct Answers: <span id="score">0</span></p>
         <p class="scores">Incorrect Answers: <span id="incorrect-score">0</span></p>
     </div>
 
-    <!-- rocket-ship -->
+    <!-- Rocket-ship -->
     <div id="rocket-div">
         <img class="rocket" id="rocket-launch" src="assets/images/rocket.png" alt="rocket ship">
     </div>
 
     <!-- https://gifer.com/en/YQDj -->
+    <!-- Explosion gif -->
     <img id="explosion" class="hidden" src="assets/images/explosion.gif" alt="explosion">
 
     <!-- https://gifer.com/en/GlIU -->
+    <!-- Fire gif -->
     <img id="fire" class="hidden" src="assets/images/fire.gif" alt="fire">
 
+    <!-- Twinkle gif -->
     <img id="twinkle" class="hidden" src="assets/images/twinkle.gif" alt="star twinkle">
 
+    <!-- Reset button -->
     <span id="reset-btn">
         <i class="fa-solid fa-arrows-rotate icon"></i>
     </span>
 
+    <!-- Link to index.html -->
     <a href="index.html"><i class="fa-solid fa-house home-icon"></i></a>
 
-    <!-- mute button hidden. Write code to add class of hidden to unmute button once clicked and remove class of hidden from mute button -->
+    <!-- Mute and unmute buttons -->
     <div id="volume-on-div"><i id="unmute-button" class="fa-solid fa-volume-xmark volume-control"></i></div>
     <div id="volume-off-div"><i id="mute-button" class="fa-solid fa-volume-high volume-control"></i></div>
 
+    <!-- Quiz game -->
     <div id="main-box" class="main-div">
         <!-- Question and answers section -->
         <div id="question-card" class="hidden">
@@ -68,12 +73,13 @@
         </div>        
     </div>
 
-     <!-- countdown timer -->
+     <!-- Countdown timer -->
      <span class="timer-container">
         <span id="tminus" class="hidden">T-Minus<br></span>
         <span id="countdown-timer"></span>
     </span>
 
+    <!-- Rules modal -->
     <dialog id="rules-modal" class="modal">
         <span id="close-rules-btn">&times;</span>
         <h1>Rocket Launch Rules</h1>
@@ -86,34 +92,32 @@
                 <p>Good luck!!</p>
     </dialog>
     
-    <!-- congrats-modal -->
+    <!-- Congrats-modal -->
     <dialog id="congrats-modal" class="modal">
-        <!-- <span class="close-congrats-btn">&times;</span> -->
         <h1>Congratulations!</h1>
         <p>You have successfully completed the mission and launched the rocket! <br>
         Would you like to play again?</p>
          
-        <!-- div to center button on modal -->
+        <!-- Div to center button on modal -->
         <div class="modal-btn-align-div">
             <button id="play-again">Play Again</button>
         </div>
     </dialog>
     
-    <!-- fail-modal -->
+    <!-- Fail-modal -->
     <dialog id="fail-modal" class="modal">
-        <!-- <span class="close-fail-btn">&times;</span> -->
         <h1>Mission Failed!</h1>
         <p>You have failed to complete the mission which has initiated the self destruct function... <br>
         Would you like to play again?</p>
 
-        <!-- div to center button on modal -->
+        <!-- Div to center button on modal -->
         <div class="modal-btn-align-div">
             <button id="try-again">Try Again</button>
         </div>
     </dialog>
 
-    <!-- audio -->
-    <!--need way to have separate control to mute all audio-->
+    <!-- Audio -->
+    <!-- https://pixabay.com/sound-effects/ -->
     <audio id="launch-audio" class="hidden" controls muted>
         <source src="assets/audio/launchaudio.mp3" type="audio/ogg">
       Your browser does not support the audio element.
