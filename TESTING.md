@@ -335,35 +335,48 @@ For JavaScript and Python applications, it's best to screenshot the errors to in
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
+- FontAwesome icons displaying as boxes
 
-    ![screenshot](documentation/bug01.png)
+    ![screenshot](documentation/testing/font-awesome-icons-bug.png)
 
-    - To fix this, I _____________________.
+    - To fix this, I removed the font-family from `*::before, ::after` 
+    and instead added it to 
+    `* {
+        font-family: Space Mono, Lato;
+        }`
 
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
+- Audio sound effects would play every time page reloaded
 
-    ![screenshot](documentation/bug02.png)
+    ![screenshot](documentation/testing/audio-bug.png)
 
-    - To fix this, I _____________________.
+    - To fix this, I added 'muted' to each audio html tag.
 
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
+- Timer starting as soon as page loaded.
+    ![screenshot](documentation/testing/timer-bug.png)
 
-    ![screenshot](documentation/bug03.png)
+    - To fix this, I moved this line `timerId = setInterval(countdown, 1000);` inside of the startQuiz function.
 
-    - To fix this, I _____________________.
+- Background image not changing between day and night scene in relation to timeOfDay function
 
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
+    ![screenshot](documentation/testing/timeofday-bug.png)
 
-    ![screenshot](documentation/bug04.png)
+    - To fix this, I changed the code to this ` bgImg.style.backgroundImage = "url('assets/images/bg-day.jpg')";`. By adding 'url()' it fixed the code.
 
-    - To fix this, I _____________________.
+- Rocket kept exploding when the timer would reach zero regardless of quantity of correct answers.
+    ![screenshot](documentation/testing/constant-destruct-bug.png)
 
-- Python `E501 line too long` (93 > 79 characters)
+    - To fix this, I changed the code to this to target lack of correct scores instead of number of incorrect scores
+    ```
+    function countdown() {
+    if (countdownTimer < 0 && correctScore < 5) {
+        hideElements();
+        initiateSelfDestruct();
+    } else {
+        timer.innerHTML = countdownTimer + ':00';
+        countdownTimer--;
+    }}
+    ```
 
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
 
 ### GitHub **Issues**
 

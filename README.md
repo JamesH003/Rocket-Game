@@ -297,6 +297,7 @@ You can fork this repository by using the following steps:
 | [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
 | [W3Schools](https://www.w3schools.com/cssref/css3_pr_text-shadow.php) | entire site | how to use text shadow |
 | [W3Schools](https://www.w3schools.com/jsref/prop_audio_muted.asp) | audio files | how to use muted property|
+| [Love Maths](https://jamesh003.github.io/love-maths/) | score area  | function to increment score|
 | [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
 | [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
 | [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
