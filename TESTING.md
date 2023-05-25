@@ -188,14 +188,13 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone.png) | Works as expected |
-| x | x | repeat for any other tested sizes |
+| Mobile (DevTools) | ![screenshot](documentation/testing/mobile-devtools-responsiveness.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/testing/tablet-devtools-responsiveness.png) | Works as expected |
+| Desktop | ![screenshot](documentation/testing/desktop-responsiveness.png) | Works as expected |
+| iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-position-error.PNG) | Positioning error of rocket & height of image too long for viewport |
+| iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-position-error1.PNG) | Positioning error of rocket & height of image too long for viewport |
+| iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-rocket-error.PNG) | Rocket reappears at top of viewport, no audio clips will play and twinkle gif just appears |
+
 
 ## Lighthouse Audit
 
