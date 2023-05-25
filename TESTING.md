@@ -219,13 +219,10 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/lighthouse-home-mobile.png) | Some minor warnings |
-| Home | Desktop | ![screenshot](documentation/lighthouse-home-desktop.png) | Few warnings |
-| About | Mobile | ![screenshot](documentation/lighthouse-about-mobile.png) | Some minor warnings |
-| About | Desktop | ![screenshot](documentation/lighthouse-about-desktop.png) | Few warnings |
-| Gallery | Mobile | ![screenshot](documentation/lighthouse-gallery-mobile.png) | Slow response time due to large images |
-| Gallery | Desktop | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | Mobile | ![screenshot](documentation/testing/mobile-home-lighthouse.png) | No warnings |
+| Home | Desktop | ![screenshot](documentation/testing/desktop-home-lighthouse.png) | No warnings |
+| Quiz | Mobile | ![screenshot](documentation/testing/mobile-quiz-lighthouse.png) | Some minor warnings |
+| Quiz | Desktop | ![screenshot](documentation/testing/desktop-quiz-lighthouse.png) | No warnings |
 
 ## Defensive Programming
 
@@ -260,7 +257,7 @@ You should include any manual tests performed, and the expected results/outcome.
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
-Defensive programming was manually tested with the below user acceptance testing:
+<!-- Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
@@ -294,7 +291,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Profile button | User will be redirected to the Profile page | Pass | |
 | | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
 | | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
+| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile | -->
 
 <!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
