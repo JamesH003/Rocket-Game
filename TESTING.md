@@ -2,17 +2,17 @@
 
 Return back to the [README.md](README.md) file.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
 Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
 with the project providing an easy and straightforward way for the users to achieve their goals.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 ## Code Validation
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Use the space to discuss code validation for any of your own code files (where applicable).
 You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
@@ -21,13 +21,13 @@ You are not required to validate external libraries/frameworks, such as imported
 
 **PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 ### HTML
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 - If you are copying/pasting your HTML code, use this link: https://validator.w3.org/#validate_by_input
 - (*recommended*) If you are using the live deployed site pages, use this link: https://validator.w3.org/#validate_by_uri
@@ -41,22 +41,18 @@ The URL will look something like this:
 
 Sample HTML code validation documentation (tables are extremely helpful!):
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJamesH003.github.io%2FRocket-Launch%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJamesH003.github.io%2FRocket-Launch%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJamesH003.github.io%2FRocket-Launch%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjamesh003.github.io%2FRocket-Launch%2F) | ![screenshot](documentation/testing/html-validation-index.png) | Pass: No Errors |
+| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjamesh003.github.io%2FRocket-Launch%2Fquiz.html) | ![screenshot](documentation/testing/html-validation-quiz.png) | Pass: No Errors |
 
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 - If you are copying/pasting your HTML code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
 - (*recommended*) If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
@@ -79,7 +75,7 @@ You are not required to validate the external libraries or frameworks!
 
 Sample CSS code validation documentation (tables are extremely helpful!):
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
@@ -91,7 +87,7 @@ Sample CSS code validation documentation (tables are extremely helpful!):
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 If using modern JavaScript (ES6) methods, then make sure to include the following
 line at the very top of every single JavaScript file (this should remain in your files for submission):
@@ -120,7 +116,7 @@ These warnings are acceptable to showcase on your screenshots.
 
 Sample JS code validation documentation (tables are extremely helpful!):
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
@@ -132,7 +128,7 @@ Sample JS code validation documentation (tables are extremely helpful!):
 
 ## Browser Compatibility
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Use this space to discuss testing the live/deployed site on various browsers.
 
@@ -154,7 +150,7 @@ If you use these, you must provide a link to the source used for attribution, an
 
 Sample browser testing documentation:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
@@ -171,7 +167,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Responsiveness
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Use this space to discuss testing the live/deployed site on various device sizes.
 
@@ -190,7 +186,7 @@ It showcases a higher level of manual tests, and can be seen as a positive inclu
 
 Sample responsiveness testing documentation:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
@@ -207,7 +203,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
 Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
@@ -222,7 +218,7 @@ Make sure to test the Lighthouse Audit results for all of your pages.
 
 Sample Lighthouse testing documentation:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
@@ -238,7 +234,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Defensive programming (defensive design) is extremely important!
 
@@ -267,7 +263,7 @@ Try to access various pages on your site as different user types (User-A, User-B
 
 You should include any manual tests performed, and the expected results/outcome.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 Defensive programming was manually tested with the below user acceptance testing:
 
@@ -305,16 +301,16 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
 | | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Repeat for all other tests, as applicable to your own site.
 The aforementioned tests are just an example of a few different project scenarios.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 ## User Story Testing
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Testing user stories is actually quite simple, once you've already got the stories defined on your README.
 
@@ -322,7 +318,7 @@ Most of your project's **features** should already align with the **user stories
 so this should as simple as creating a table with the user story, matching with the re-used screenshot
 from the respective feature.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 | User Story | Screenshot |
 | --- | --- |
@@ -339,7 +335,7 @@ from the respective feature.
 
 ## Bugs
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 It's very important to document any bugs you've discovered while developing the project.
 Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
@@ -348,7 +344,7 @@ For JavaScript and Python applications, it's best to screenshot the errors to in
 
 **PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 - JS Uncaught ReferenceError: `foobar` is undefined/not defined
 
@@ -382,7 +378,7 @@ For JavaScript and Python applications, it's best to screenshot the errors to in
 
 ### GitHub **Issues**
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
 To access your Issues, click on the "Issues" tab at the top of your repository.
@@ -398,7 +394,7 @@ Once you've sorted the issue, you should then "Close" it.
 
 When showcasing your bug tracking for assessment, you can use the following format:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 **Fixed Bugs**
 
@@ -421,7 +417,7 @@ Any remaining open issues can be tracked [here](https://github.com/JamesH003/Roc
 
 ## Unfixed Bugs
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 You will need to mention unfixed bugs and why they were not fixed.
 This section should include shortcomings of the frameworks or technologies used.
@@ -434,7 +430,7 @@ they need to know whether or not you're aware of them as well, and why you've no
 
 Some examples:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 - On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
 
@@ -454,10 +450,10 @@ Some examples:
 
     - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
 
 There are no remaining bugs that I am aware of.
