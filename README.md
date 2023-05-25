@@ -42,7 +42,7 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 ### New Site Users
 
 - As a new site user, I would like to understand the purpose of the site, so that I can decide if I want to use it.
-- As a new site user, I would like to understand the aim of the game, so that I can maximise my chances .
+- As a new site user, I would like to understand the aim of the game, so that I can maximise my chances.
 - As a new site user, I would like to see strong enticing visuals, so that I can enjoy the experience.
 - As a new site user, I would like to readily understand the layout of the game/quiz, so that I don't waste time figuring it out.
 - As a new site user, I would like to be able to control any sound, so that I can tailor my experience to my needs.
@@ -51,7 +51,6 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 ### Returning Site Users
 
 - As a returning site user, I would like to have a random selection of quesions, so that I can attempt the game multiple times.
-- As a returning site user, I would like to be able to see my previous scores, so that I can attempt to improve on them.
 
 ## Wireframes
 

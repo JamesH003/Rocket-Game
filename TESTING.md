@@ -314,16 +314,13 @@ from the respective feature.
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a new site user, I would like to understand the purpose of the site, so that I can decide if I want to use it. | ![screenshot](documentation/user-stories/user-stories-purpose.png) |
+| As a new site user, I would like to understand the aim of the game, so that I can maximise my chances | ![screenshot](documentation/user-stories/user-stories-aim.png) |
+| As a new site user, I would like to see strong enticing visuals, so that I can enjoy the experience. | ![screenshot](documentation/user-stories/user-stories-purpose.png) |
+| As a new site user, I would like to readily understand the layout of the game/quiz, so that I don't waste time figuring it out.| ![screenshot](documentation/user-stories/user-stories-undestand.png) |
+As a new site user, I would like to be able to control any sound, so that I can tailor my experience to my needs.| ![screenshot](documentation/user-stories/user-stories-volume.png) |
+As a new site user, I would like there to be an element of jeopardy to the game, to increase my gaming experience.| ![screenshot](documentation/user-stories/user-stories-jeopardy.png) |
+| As a returning site user, I would like to have a random selection of quesions, so that I can attempt the game multiple times. | ![screenshot](documentation/user-stories/user-stories-random.png) |
 
 ## Bugs
 
