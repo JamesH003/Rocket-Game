@@ -304,6 +304,7 @@ You can fork this repository by using the following steps:
 | [CSSTricks](https://css-tricks.com/almanac/selectors/a/after-and-before/) | entire site | how to use ::before and ::after pseudo-elements |
 | [YouTube](https://www.youtube.com/watch?v=ywtkJkxJsdg) | dialog modals | tutorial for adding dialog modals to site |
 | [YouTube](https://www.youtube.com/watch?v=riDzcEQbX6k) | quiz game | tutorial for creating quiz game |
+| [Autoprefixer](https://autoprefixer.github.io/) | style.css | CSS prefixes |
 
 
 ### Media
