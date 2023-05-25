@@ -79,9 +79,8 @@ Sample CSS code validation documentation (tables are extremely helpful!):
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2FJamesH003.github.io%2FRocket-Launch) | ![screenshot](documentation/css-validation-style.png) | Pass: No Errors |
-| checkout.css | n/a | ![screenshot](documentation/css-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining CSS files |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjamesh003.github.io%2FRocket-Launch%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/testing/css-validation-home.png) | Pass: No Errors |
+
 
 ### JavaScript
 

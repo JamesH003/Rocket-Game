@@ -227,7 +227,6 @@ function initiateLaunchSequence() {
         }, 14500);
         setTimeout(() => {
             congratsModal.showModal()
-            console.log('congrats modal')
         }, 16000);
     } else if (incorrectScore >= 3) {
         hideElements();
@@ -277,17 +276,6 @@ function openRulesModal() {
     rulesModal.showModal();
 }
 
-// Congrats modal
-function openCongratsModal() {
-    congratsModal.showModal()
-}
-
-// Fail modal
-function openFailModal() {
-    failModal.showModal();
-
-}
-
 // When the user clicks on <span> (x), close the modal
 function closeRulesModal() {
     rulesModal.close();
@@ -332,10 +320,6 @@ function playExplosionAudio() {
 
 function playFireAudio() {
     fireAudio.play();
-}
-
-function pauseAudio() {
-    launchAudio.pause();
 }
 
 function enableMute() {
