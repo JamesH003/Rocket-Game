@@ -73,16 +73,16 @@ closeRules.addEventListener('click', closeRulesModal);
 // Closes the Rules modal when the user clicks anywhere outside the modal
 // https://blog.webdevsimplified.com/2023-04/html-dialog/
 rulesModal.addEventListener("click", e => {
-    const dialogDimensions = rulesModal.getBoundingClientRect()
+    const dialogDimensions = rulesModal.getBoundingClientRect();
     if (
         e.clientX < dialogDimensions.left ||
         e.clientX > dialogDimensions.right ||
         e.clientY < dialogDimensions.top ||
         e.clientY > dialogDimensions.bottom
     ) {
-        rulesModal.close()
+        rulesModal.close();
     }
-})
+});
 
 // Calls the mute or unmute functions when clicked
 muteAudio.addEventListener('click', enableMute);
@@ -226,7 +226,7 @@ function initiateLaunchSequence() {
             playTwinkleAudio();
         }, 14500);
         setTimeout(() => {
-            congratsModal.showModal()
+            congratsModal.showModal();
         }, 16000);
     } else if (incorrectScore >= 3) {
         hideElements();
@@ -261,13 +261,13 @@ function initiateSelfDestruct() {
         fire.style.display = 'block';
     }, 6000);
     setTimeout(() => {
-        playExplosionAudio()
+        playExplosionAudio();
     }, 5705);
     setTimeout(() => {
-        playFireAudio()
+        playFireAudio();
     }, 7500);
     setTimeout(() => {
-        failModal.showModal()
+        failModal.showModal();
     }, 9000);
 }
 
