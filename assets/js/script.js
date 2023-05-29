@@ -143,7 +143,6 @@ function displayQuestion(question) {
 
 // This is when we actually select an answer
 function userAnswer(e) {
-    console.log(e);
     let selectedButton = e.target;
     let correct = selectedButton.dataset.correct;
     setStatus(document.body, correct, selectedButton);
@@ -291,7 +290,7 @@ function closeRulesModal() {
 let today = new Date();
 let hours = today.getHours();
 
-console.log(hours);
+
 timeOfDay();
 // Changes background image depending on the users time of day
 function timeOfDay() {
