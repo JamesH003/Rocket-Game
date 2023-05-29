@@ -38,6 +38,7 @@ let tryAgain = document.getElementById('try-again');
 let playAgain = document.getElementById('play-again');
 let bgImg = document.getElementById('bg-img');
 // Audio variables & controls
+let audios = document.querySelectorAll('audio');
 let launchAudio = document.getElementById('launch-audio');
 let twinkleAudio = document.getElementById('twinkle-audio');
 let explosionAudio = document.getElementById('explosion-audio');
@@ -225,7 +226,7 @@ function initiateLaunchSequence() {
         hideElements();
         rocket.style.animation = 'shake 0.5s infinite, rocket-launch 10s forwards 6s';
         setTimeout(() => {
-            playAudio('launchaudio');
+            playAudio(launchAudio);
         }, 6000);
         setTimeout(() => {
             rocket.classList.add('hidden');
@@ -237,7 +238,7 @@ function initiateLaunchSequence() {
             }, 1000);
         }, 15000);
         setTimeout(() => {
-            playAudio('twinkle-ding');
+            playAudio(twinkleAudio);
         }, 14500);
         setTimeout(() => {
             congratsModal.showModal();
@@ -275,10 +276,10 @@ function initiateSelfDestruct() {
         fire.classList.remove('hidden');
     }, 6000);
     setTimeout(() => {
-        playAudio('explosion');
+        playAudio(explosionAudio);
     }, 5705);
     setTimeout(() => {
-        playAudio('fire-burning');
+        playAudio(fireAudio);
     }, 7500);
     setTimeout(() => {
         failModal.showModal();
@@ -320,8 +321,7 @@ playAgain.addEventListener("click", function () {
 });
 
 // setup audio file(s)
-function playAudio(file) {
-    let audio = new Audio(`assets/audio/${file}.mp3`);
+function playAudio(audio) {
     audio.load();
     audio.pause();
     audio.currentTime = 0;
@@ -329,20 +329,20 @@ function playAudio(file) {
     audio.play();
 }
 
+// mutes all audio files
 function enableMute() {
-    launchAudio.muted = true;
-    twinkleAudio.muted = true;
-    explosionAudio.muted = true;
-    fireAudio.muted = true;
+    audios.forEach(audio => {
+        audio.muted = true;
+    });
     unmuteAudio.classList.remove('hidden');
     muteAudio.classList.add('hidden');
 }
 
+// unmutes all audio files
 function disableMute() {
-    launchAudio.muted = false;
-    twinkleAudio.muted = false;
-    explosionAudio.muted = false;
-    fireAudio.muted = false;
+    audios.forEach(audio => {
+        audio.muted = false;
+    });
     unmuteAudio.classList.add('hidden');
     muteAudio.classList.remove('hidden');
 }
