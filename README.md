@@ -306,6 +306,7 @@ You can fork this repository by using the following steps:
 | [YouTube](https://www.youtube.com/watch?v=riDzcEQbX6k) | quiz game | tutorial for creating quiz game |
 | [Autoprefixer](https://autoprefixer.github.io/) | style.css | CSS prefixes |
 | [redstapler](https://redstapler.co/all-css-viewport-units-svh-lvh-svw-lvw-dvh-dvw-explained/) | style.css | `svh`, `lvh`, `dvh` |
+| [StackOverflow](https://stackoverflow.com/a/13610701) | quiz page | loop fire crackling audio |
 
 
 ### Media
