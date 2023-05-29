@@ -89,18 +89,22 @@ As a new site user, I would like there to be an element of jeopardy to the game,
     ![screenshot](documentation/testing/font-awesome-icons-bug.png)
 
     - To fix this, I removed the font-family from `*::before, ::after` 
-    and instead added it to 
-    `* {
+    and instead added it to:
+
+    ```css
+    * {
         font-family: Space Mono, Lato;
-        }`
+    }
+    ```
 
 - Audio sound effects would play every time page reloaded
 
     ![screenshot](documentation/testing/audio-bug.png)
 
-    - To fix this, I added 'muted' to each audio html tag.
+    - To fix this, I added `muted` to each audio html tag.
 
 - Timer starting as soon as page loaded.
+
     ![screenshot](documentation/testing/timer-bug.png)
 
     - To fix this, I moved this line `timerId = setInterval(countdown, 1000);` inside of the startQuiz function.
@@ -109,13 +113,15 @@ As a new site user, I would like there to be an element of jeopardy to the game,
 
     ![screenshot](documentation/testing/timeofday-bug.png)
 
-    - To fix this, I changed the code to this ` bgImg.style.backgroundImage = "url('assets/images/bg-day.jpg')";`. By adding 'url()' it fixed the code.
+    - To fix this, I changed the code to this `bgImg.style.backgroundImage = "url('assets/images/bg-day.jpg')";`. By adding `url()` it fixed the code.
 
 - Rocket kept exploding when the timer would reach zero regardless of quantity of correct answers.
+
     ![screenshot](documentation/testing/constant-destruct-bug.png)
 
     - To fix this, I changed the code to this to target lack of correct scores instead of number of incorrect scores
-    ```
+
+    ```js
     function countdown() {
     if (countdownTimer < 0 && correctScore < 5) {
         hideElements();
