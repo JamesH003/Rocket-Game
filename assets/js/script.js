@@ -73,8 +73,7 @@ rulesBtn.addEventListener('click', openRulesModal);
 closeRules.addEventListener('click', closeRulesModal);
 
 // Closes a modal when the user clicks anywhere outside the modal
-// https://blog.webdevsimplified.com/2023-04/html-dialog/
-// loop each modal to allow clicking outside of dialog to close it
+// Loop each modal to allow clicking outside of dialog to close it
 modals.forEach(modal => {
     modal.addEventListener("click", e => {
         const dialogDimensions = modal.getBoundingClientRect();
@@ -82,7 +81,7 @@ modals.forEach(modal => {
     });
 });
 
-// close the specific modal
+// Close the specific modal
 function closeDialog(e, modal, dialogDimensions) {
     if (
         e.clientX < dialogDimensions.left ||
@@ -99,7 +98,7 @@ muteAudio.addEventListener('click', enableMute);
 unmuteAudio.addEventListener('click', disableMute);
 
 // Functions
-// function to start the game when the 'Start' button is clicked
+// Function to start the game when the 'Start' button is clicked
 function startQuiz() {
     timerId = setInterval(countdown, 1000);
     // Adds the class of 'hidden' and hides the start button once clicked
@@ -113,7 +112,7 @@ function startQuiz() {
     // Removes the hidden class and allows the question container to be displayed
     questionCard.classList.remove('hidden');
     scoreArea.classList.remove('hidden');
-    // calls the next question function
+    // Calls the next question function
     nextQuestion();
 }
 
@@ -183,7 +182,7 @@ function setStatus(element, correct, selectedButton) {
         }
     } else {
         element.classList.add('incorrect');
-        // only decrement if it hasn't already been for this round
+        // Only decrement if it hasn't already been for this round
         if (!scoreDecremented && selectedButton.dataset.correct == undefined) {
             mainBox.style.boxShadow = '0 0 50px 2px rgba(255, 0, 0, 1)';
             incrementIncorrectScore();
@@ -312,7 +311,7 @@ function timeOfDay() {
     }
 }
 
-// restart button
+// Restart button
 tryAgain.addEventListener("click", function () {
     window.location.reload();
 });
@@ -321,14 +320,14 @@ playAgain.addEventListener("click", function () {
     window.location.reload();
 });
 
-// setup audio file(s)
+// Setup audio file(s)
 function playAudio(audio) {
     audio.load();
     audio.pause();
     audio.currentTime = 0;
     audio.volume = 0.025;
     audio.play();
-    // loop the audio file if it's the fire crackling
+    // Loop the audio file if it's the fire crackling
     if (audio.id == 'fire-audio') {
         audio.addEventListener('ended', function() {
             this.currentTime = 0;
@@ -337,7 +336,7 @@ function playAudio(audio) {
     }
 }
 
-// mutes all audio files
+// Mutes all audio files
 function enableMute() {
     audios.forEach(audio => {
         audio.muted = true;
@@ -346,7 +345,7 @@ function enableMute() {
     muteAudio.classList.add('hidden');
 }
 
-// unmutes all audio files
+// Unmutes all audio files
 function disableMute() {
     audios.forEach(audio => {
         audio.muted = false;

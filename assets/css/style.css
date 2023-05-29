@@ -70,6 +70,13 @@ body {
     right: 108px;
 }
 
+/* Hover effect on icons */
+.icon:hover,
+.volume-control:hover,
+.home-icon:hover {
+    color: #fff;
+} 
+
 /* index.html */
 /* Landing page */
 #homepage-body {
