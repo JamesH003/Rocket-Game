@@ -35,7 +35,7 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 - [Space Mono](https://fonts.google.com/specimen/Space+Mono) was used for the primary headers and titles and all text.
 
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- [Font Awesome](https://fontawesome.com) icons were used on the site, such as the home, mute/unmute and reset icons in the top-right corner of the quiz page.
 
 ## User Stories
 
