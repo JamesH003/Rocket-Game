@@ -328,6 +328,13 @@ function playAudio(audio) {
     audio.currentTime = 0;
     audio.volume = 0.025;
     audio.play();
+    // loop the audio file if it's the fire crackling
+    if (audio.id == 'fire-audio') {
+        audio.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+    }
 }
 
 // mutes all audio files
