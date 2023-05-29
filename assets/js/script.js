@@ -261,16 +261,16 @@ function hideElements() {
 function initiateSelfDestruct() {
     setTimeout(() => {
         clearInterval(timerId);
-        rocket.style.display = 'none';
-        explosion.style.display = 'block';
+        rocket.classList.add('hidden');
+        explosion.classList.remove('hidden');
         timer.classList.add('hidden');
-        fire.style.display = 'block';
+        fire.classList.remove('hidden');
     }, 6000);
     setTimeout(() => {
-        playExplosionAudio();
+        playAudio('explosion');
     }, 5705);
     setTimeout(() => {
-        playFireAudio();
+        playAudio('fire-burning');
     }, 7500);
     setTimeout(() => {
         failModal.showModal();
