@@ -28,8 +28,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![screenshot](documentation/testing/js-validation-script.png) | One undefined variable
- |
+| script.js | ![screenshot](documentation/testing/js-validation-script.png) | One undefined variable |
 | questions.js | ![screenshot](documentation/testing/js-validation-questions.png) | One unused variable |
 
 ## Browser Compatibility
