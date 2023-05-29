@@ -116,7 +116,7 @@ body {
     -webkit-box-shadow: 0 0 50px;
             box-shadow: 0 0 50px;
     text-decoration: none;
-    margin-top: 2.5em;
+    margin: 2.5em auto;
 }
 
 /* Hover on begin mission button */
