@@ -162,5 +162,245 @@ const questions = [
             }
         ]
     },
+    {
+        question: 'How many planets are there in the solar system?',
+        answers: [{
+                text: '8',
+                correct: false
+            },
+            {
+                text: '9',
+                correct: true
+            },
+            {
+                text: '7',
+                correct: false
+            },
+            {
+                text: '10',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which planet is named after the Roman god of war?',
+        answers: [{
+                text: 'Venus',
+                correct: false
+            },
+            {
+                text: 'Mars',
+                correct: true
+            },
+            {
+                text: 'Jupiter',
+                correct: false
+            },
+            {
+                text: 'Saturn',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which planet has a day which lasts eight months?',
+        answers: [{
+                text: 'Mercury',
+                correct: false
+            },
+            {
+                text: 'Venus',
+                correct: true
+            },
+            {
+                text: 'Uranus',
+                correct: false
+            },
+            {
+                text: 'Saturn',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What is the term for a natural satellite?',
+        answers: [{
+                text: 'Nebula',
+                correct: false
+            },
+            {
+                text: 'Moon',
+                correct: true
+            },
+            {
+                text: 'Comet',
+                correct: false
+            },
+            {
+                text: 'Asteroid',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Who was the first man in space?',
+        answers: [{
+                text: 'Neil Armstrong',
+                correct: false
+            },
+            {
+                text: 'Yuri Gagarin',
+                correct: true
+            },
+            {
+                text: 'Buzz Aldrin',
+                correct: false
+            },
+            {
+                text: 'Chris Hadfield',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'How many constellations are there?',
+        answers: [{
+                text: '77',
+                correct: false
+            },
+            {
+                text: '88',
+                correct: true
+            },
+            {
+                text: '66',
+                correct: false
+            },
+            {
+                text: '99',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What shape is the Milky Way?',
+        answers: [{
+                text: 'Circle',
+                correct: false
+            },
+            {
+                text: 'Spiral',
+                correct: true
+            },
+            {
+                text: 'Triangle',
+                correct: false
+            },
+            {
+                text: 'Oval',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which planet takes almost 30 Earth years to orbit the sun?',
+        answers: [{
+                text: 'Mercury',
+                correct: false
+            },
+            {
+                text: 'Saturn',
+                correct: true
+            },
+            {
+                text: 'Venus',
+                correct: false
+            },
+            {
+                text: 'Jupiter',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What was the name of the Apollo 11 lunar lander?',
+        answers: [{
+                text: 'Bounty',
+                correct: false
+            },
+            {
+                text: 'Eagle',
+                correct: true
+            },
+            {
+                text: 'Beagle',
+                correct: false
+            },
+            {
+                text: 'Enterprise',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What was the first man-made satellite?',
+        answers: [{
+                text: 'Voyager',
+                correct: false
+            },
+            {
+                text: 'Sputnik',
+                correct: true
+            },
+            {
+                text: 'Apollo 8',
+                correct: false
+            },
+            {
+                text: 'Telstar',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which astronaut became the president of an airline?',
+        answers: [{
+                text: 'John Glenn',
+                correct: false
+            },
+            {
+                text: 'Frank Borman',
+                correct: true
+            },
+            {
+                text: 'Buzz Aldrin',
+                correct: false
+            },
+            {
+                text: 'Neil Armstrong',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'What was the first manned flight around the moon?',
+        answers: [{
+                text: 'Soyuz 12',
+                correct: false
+            },
+            {
+                text: 'Apollo 8',
+                correct: true
+            },
+            {
+                text: 'Apollo 11',
+                correct: false
+            },
+            {
+                text: 'Gemini 2',
+                correct: false
+            }
+        ]
+    }
 
 ];
