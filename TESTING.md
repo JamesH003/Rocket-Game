@@ -157,4 +157,21 @@ As a new site user, I would like there to be an element of jeopardy to the game,
     ![screenshot](documentation/testing/iphone-rocket-position-error.PNG)
     ![screenshot](documentation/testing/iphone-twinkle-position-error.PNG)
 
+    - I attempted to fix this by using a CSS prefix, but this did not rectify the issue.
+    ```CSS
+    @-webkit-keyframes rocket-launch {
+    0%  {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(30deg) scale(0.0001);transform: rotate(30deg) scale(0.0001); bottom: 42.4em; left: 16em;}
+    }
+    ```
+
+    - I also tried to change the code to reference the position from the `top` instead of `bottom`, however this distorted the launch sequence.
+    ```CSS
+    @keyframes rocket-launch {
+    0%  {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(30deg) scale(0.0001);transform: rotate(30deg) scale(0.0001); top: 1em; left: 16em;}
+    }
+    ```
+
+
 There are no remaining bugs that I am aware of.

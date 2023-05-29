@@ -452,6 +452,7 @@ body.incorrect {
     0%  {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
     100% {-webkit-transform: rotate(30deg) scale(0.0001);transform: rotate(30deg) scale(0.0001); bottom: 42.4em; left: 16em;}
 }
+
 @keyframes rocket-launch {
     0%  {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
     100% {-webkit-transform: rotate(30deg) scale(0.0001);transform: rotate(30deg) scale(0.0001); bottom: 42.4em; left: 16em;}
