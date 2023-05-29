@@ -61,11 +61,6 @@ body {
     right: 60px;
 }
 
-/* Initially hides unmute button */
-#volume-off-div {
-    display: none;
-}
-
 /* Home icon - link to homepage */
 .home-icon {
     font-size: 150%;
