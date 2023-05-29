@@ -40,8 +40,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Chrome | ![screenshot](documentation/testing/chrome-testing.png) | Works as expected |
 | Firefox | ![screenshot](documentation/testing/firefox-testing.png) | Works as expected |
 | Edge | ![screenshot](documentation/testing/edge-testing.png) | Works as expected |
-| Safari | ![screenshot](documentation/testing/safari-testing-rocket-error.png) | Bug with rocket reappearing and twinkle not displaying properly |
-| Safari | ![screenshot](documentation/testing/safari-testing-explosion-error.png) | Bug with explosion just appearing instead of playing and no sound effects playing |
+| Safari | ![screenshot](documentation/testing/safari-testing-explosion-error.png) | Works as expected |
 | Brave | ![screenshot](documentation/testing/brave-testing.png) | Works as expected |
 | Opera | ![screenshot](documentation/testing/opera-testing.png) | Works as expected |
 
@@ -54,10 +53,8 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Mobile (DevTools) | ![screenshot](documentation/testing/mobile-devtools-responsiveness.png) | Works as expected |
 | Tablet (DevTools) | ![screenshot](documentation/testing/tablet-devtools-responsiveness.png) | Works as expected |
 | Desktop | ![screenshot](documentation/testing/desktop-responsiveness.png) | Works as expected |
-| iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-position-error.PNG) | Positioning error of rocket & height of image too long for viewport |
-| iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-position-error1.PNG) | Positioning error of rocket & height of image too long for viewport |
-| iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-rocket-error.PNG) | Rocket reappears at top of viewport, no audio clips will play and twinkle gif just appears |
-
+| iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness1.PNG) | Works as expected |
+| iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness2.PNG) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -132,45 +129,27 @@ As a new site user, I would like there to be an element of jeopardy to the game,
     }}
     ```
 
+    - No sound effects playing on Safari on either mobile or desktop
+
+    ![screenshot](documentation/testing/safari-testing-explosion-error.png)
+
+    - To fix this, I added these lines of code to the playAudio function to load the audio and play from the beginning.
+
+    ```js
+        audio.load();
+        audio.pause();
+        audio.currentTime = 0;
+    ```
+
+- Positioning error of rocket & height of image too long for viewport on iPhone 11.
+
+    ![screenshot](documentation/testing/iphone11-responsiveness-position-error.PNG)
+
+    - To fix this, I changed the code the min-height of the body to 100svh.
+    ```css
+    min-height: 100svh;
+    ```
+
 ## Unfixed Bugs
-
-<!-- ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑 -->
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/unfixed-bug03.png)
-
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-    | Safari | ![screenshot](documentation/testing/safari-testing-rocket-error.png) | Bug with rocket reappearing and twinkle not displaying properly |
-    | Safari | ![screenshot](documentation/testing/safari-testing-explosion-error.png) | Bug with explosion just appearing instead of playing and no sound effects playing |
-    | iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-position-error.PNG) | Positioning error of rocket & height of image too long for viewport |
-    | iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-position-error1.PNG) | Positioning error of rocket & height of image too long for viewport |
-    | iPhone 11 | ![screenshot](documentation/testing/iphone11-responsiveness-rocket-error.PNG) | Rocket reappears at top of viewport, no audio clips will play and twinkle gif just appears |
 
 There are no remaining bugs that I am aware of.
