@@ -450,18 +450,18 @@ body.incorrect {
 /* Rocket launch animation */
 @-webkit-keyframes rocket-launch {
     0%  {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(30deg) scale(0.0001);transform: rotate(30deg) scale(0.0001); bottom: 42.4em; left: 16em;}
+    100% {-webkit-transform: rotate(30deg) scale(0.0001);transform: rotate(30deg) scale(0.0001); bottom: 41em; left: 16em;}
 }
 
 @keyframes rocket-launch {
     0%  {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(30deg) scale(0.0001);transform: rotate(30deg) scale(0.0001); bottom: 42.4em; left: 16em;}
+    100% {-webkit-transform: rotate(30deg) scale(0.0001);transform: rotate(30deg) scale(0.0001); bottom: 41em; left: 16em;}
 }
 
 /* Positioning of twinkle */
 #twinkle {
     position: absolute;
-    top: 1em;
+    top: 0.5em;
     left: 15em;
 }
 
