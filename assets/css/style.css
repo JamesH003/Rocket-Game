@@ -569,8 +569,6 @@ body.incorrect {
     
     /* Twinkle gif */
     #twinkle {
-        position: absolute;
-        bottom: 41.5em;
         left: 30.5em;
     }
 
