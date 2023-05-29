@@ -21,7 +21,8 @@ let correctScore = 0;
 let incorrectScore = 0;
 let scoreIncremented = false;
 let scoreDecremented = false;
-// Get the modal
+// Get the modals
+let modals = document.querySelectorAll(".modal");
 let rulesModal = document.getElementById("rules-modal");
 let congratsModal = document.getElementById("congrats-modal");
 let failModal = document.getElementById("fail-modal");
@@ -70,19 +71,27 @@ rulesBtn.addEventListener('click', openRulesModal);
 // Runs the closeRulesModal function when the X is clicked
 closeRules.addEventListener('click', closeRulesModal);
 
-// Closes the Rules modal when the user clicks anywhere outside the modal
+// Closes a modal when the user clicks anywhere outside the modal
 // https://blog.webdevsimplified.com/2023-04/html-dialog/
-rulesModal.addEventListener("click", e => {
-    const dialogDimensions = rulesModal.getBoundingClientRect();
+// loop each modal to allow clicking outside of dialog to close it
+modals.forEach(modal => {
+    modal.addEventListener("click", e => {
+        const dialogDimensions = modal.getBoundingClientRect();
+        closeDialog(e, modal, dialogDimensions);
+    });
+});
+
+// close the specific modal
+function closeDialog(e, modal, dialogDimensions) {
     if (
         e.clientX < dialogDimensions.left ||
         e.clientX > dialogDimensions.right ||
         e.clientY < dialogDimensions.top ||
         e.clientY > dialogDimensions.bottom
     ) {
-        rulesModal.close();
+        modal.close();
     }
-});
+}
 
 // Calls the mute or unmute functions when clicked
 muteAudio.addEventListener('click', enableMute);
