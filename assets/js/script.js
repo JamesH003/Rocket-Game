@@ -217,13 +217,19 @@ function initiateLaunchSequence() {
         hideElements();
         rocket.style.animation = 'shake 0.5s infinite, rocket-launch 10s forwards 6s';
         setTimeout(() => {
-            playLaunchAudio();
+            playAudio('launchaudio');
         }, 6000);
         setTimeout(() => {
-            twinkle.style.display = 'block';
+            rocket.classList.add('hidden');
+            document.body.style.overflowX = 'hidden';
+            twinkle.classList.remove('hidden');
+            setTimeout(() => {
+                document.body.style.overflowX = 'unset';
+                twinkle.classList.add('hidden');
+            }, 1000);
         }, 15000);
         setTimeout(() => {
-            playTwinkleAudio();
+            playAudio('twinkle-ding');
         }, 14500);
         setTimeout(() => {
             congratsModal.showModal();
