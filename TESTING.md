@@ -152,4 +152,9 @@ As a new site user, I would like there to be an element of jeopardy to the game,
 
 ## Unfixed Bugs
 
+ - Mis-alignment of the rocket and twinkle effect when launched on iPhone 11.
+
+    ![screenshot](documentation/testing/iphone-rocket-position-error.PNG)
+    ![screenshot](documentation/testing/iphone-twinkle-position-error.PNG)
+
 There are no remaining bugs that I am aware of.
