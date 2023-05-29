@@ -294,8 +294,19 @@ body.incorrect {
 /* Rules modal - good luck */
 #rules-modal p {
     text-align: center;
-    padding: 1em 1em 1em 0em;
+    padding: 1em;
     font-size: 118%;
+}
+
+/* Designer credit and github link */
+#rules-modal h3 {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Github icon */
+#rules-modal i {
+    color: #00f7fe;
 }
 
 /* Congrats modal */
@@ -529,6 +540,11 @@ body.incorrect {
     /* Rules modal good luck */
     #rules-modal p {
         font-size: 200%;
+    }
+
+    /* Designer credit and github link */
+    #rules-modal h3 {
+        font-size: 1.2em;
     }
 
     /* Congrats and Fail modal header font-size */
