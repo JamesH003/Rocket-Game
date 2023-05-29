@@ -310,21 +310,14 @@ playAgain.addEventListener("click", function () {
     window.location.reload();
 });
 
-// audio
-function playLaunchAudio() {
-    launchAudio.play();
-}
-
-function playTwinkleAudio() {
-    twinkleAudio.play();
-}
-
-function playExplosionAudio() {
-    explosionAudio.play();
-}
-
-function playFireAudio() {
-    fireAudio.play();
+// setup audio file(s)
+function playAudio(file) {
+    let audio = new Audio(`assets/audio/${file}.mp3`);
+    audio.load();
+    audio.pause();
+    audio.currentTime = 0;
+    audio.volume = 0.025;
+    audio.play();
 }
 
 function enableMute() {
@@ -332,8 +325,8 @@ function enableMute() {
     twinkleAudio.muted = true;
     explosionAudio.muted = true;
     fireAudio.muted = true;
-    unmuteAudio.style.display = 'block';
-    muteAudio.style.display = 'none';
+    unmuteAudio.classList.remove('hidden');
+    muteAudio.classList.add('hidden');
 }
 
 function disableMute() {
@@ -341,6 +334,6 @@ function disableMute() {
     twinkleAudio.muted = false;
     explosionAudio.muted = false;
     fireAudio.muted = false;
-    unmuteAudio.style.display = 'none';
-    muteAudio.style.display = 'block';
+    unmuteAudio.classList.add('hidden');
+    muteAudio.classList.remove('hidden');
 }
