@@ -139,7 +139,8 @@ function nextQuestion() {
 // Assigns buttons to the various answers for the user to choose from
 function displayQuestion(question) {
     questionElement.innerText = question.question;
-    question.answers.forEach(answer => {
+    let questionAnswers = question.answers.sort(() => Math.random() - 0.5);
+    questionAnswers.forEach(answer => {
         let button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
